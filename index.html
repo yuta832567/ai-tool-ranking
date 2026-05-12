@@ -1,0 +1,3397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>業務AIツール 分野別ランキング 2026年5月版</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAFBFF;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #EFF5FB;
+    --ink: #0A0E1A;
+    --ink-2: #2D3A52;
+    --ink-muted: #6B7A96;
+    --line: #D4E3F5;
+    --line-2: #B8D0EC;
+
+    /* ─── Primary: Blue ─── */
+    --gold: #1A4F9C;          /* primary blue (structural accents, labels, borders) */
+    --gold-light: #4880CC;    /* lighter blue */
+    --gold-bg: #EBF2FC;       /* very light blue bg */
+
+    /* ─── Yellow (1st-place highlight) ─── */
+    --yellow: #D4940A;        /* warm amber-yellow */
+    --yellow-light: #F2C040;
+    --yellow-bg: #FEF8E0;
+    --yellow-border: #E8B830;
+
+    /* ─── Silver / Bronze (2nd / 3rd) ─── */
+    --silver: #7A90B0;
+    --silver-bg: #EBF0F6;
+    --bronze: #3A72A8;        /* mid-blue for 3rd */
+    --bronze-bg: #DCEAF7;
+
+    --navy: #0D2B62;
+    --accent: #1A6BBF;
+    --serif-jp: 'Shippori Mincho B1', serif;
+    --sans-jp: 'Zen Kaku Gothic New', sans-serif;
+    --serif-en: 'Fraunces', serif;
+    --sans-en: 'IBM Plex Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans-jp);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    font-feature-settings: "palt";
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ========= TOPBAR ========= */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(250, 250, 247, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brand { display: flex; align-items: baseline; gap: 14px; }
+  .brand-mark {
+    font-family: var(--serif-en);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    font-style: italic;
+  }
+  .brand-sep { width: 1px; height: 18px; background: var(--line-2); }
+  .brand-text {
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+  }
+  .topbar-meta {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-family: var(--sans-en);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .meta-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-right: 8px;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  /* ========= HERO ========= */
+  .hero {
+    padding: 120px 48px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 80px;
+    right: 48px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, var(--gold-bg) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0.8;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--sans-en);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+  }
+  .eyebrow::before { content: ""; width: 36px; height: 1px; background: var(--gold); }
+  .hero h1 {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 40px;
+    max-width: 1100px;
+  }
+  .hero h1 .italic {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gold);
+  }
+  .hero h1 .num {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-style: italic;
+  }
+  .hero-lead {
+    font-family: var(--serif-jp);
+    font-size: clamp(16px, 1.3vw, 19px);
+    line-height: 2;
+    color: var(--ink-2);
+    max-width: 760px;
+    margin-bottom: 60px;
+  }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px;
+    padding-top: 48px;
+    border-top: 1px solid var(--line-2);
+    max-width: 900px;
+  }
+  .hero-stat .n {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 10px;
+  }
+  .hero-stat .l {
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  /* ========= SECTIONS ========= */
+  .section {
+    padding: 90px 48px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .section-title .num-chip {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--gold);
+    margin-right: 18px;
+    vertical-align: 0.2em;
+  }
+  .section-sub {
+    font-family: var(--serif-jp);
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink-muted);
+    max-width: 640px;
+    margin-bottom: 56px;
+  }
+
+  /* ========= CRITERIA ========= */
+  .criteria-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 56px;
+    position: relative;
+  }
+  .criteria-wrap::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 56px;
+    right: 56px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+  .criteria-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+  .criterion { padding: 0 28px; border-right: 1px solid var(--line); }
+  .criterion:first-child { padding-left: 0; }
+  .criterion:last-child { padding-right: 0; border-right: none; }
+  .criterion-num {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 42px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .criterion-title {
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .criterion-stars {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .criterion-body { font-size: 13px; line-height: 1.8; color: var(--ink-muted); }
+
+  /* ========= TABS ========= */
+  .tabs-container { margin-top: 40px; }
+  .tab-scroll-wrap {
+    position: sticky;
+    top: 68px;
+    background: var(--bg);
+    padding: 24px 0 20px;
+    margin: 0 -48px 40px;
+    padding-left: 48px;
+    padding-right: 48px;
+    z-index: 10;
+    border-bottom: 1px solid var(--line);
+  }
+  .tabs-nav {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .tabs-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 14px 22px;
+    font-family: var(--serif-jp);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-muted);
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .tab-btn .tnum {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    margin-right: 8px;
+    color: var(--gold);
+    font-size: 13px;
+  }
+  .tab-btn:hover { color: var(--ink); }
+  .tab-btn.active { color: var(--ink); }
+  .tab-btn.active::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--ink);
+  }
+
+  /* ========= TAB CONTENT ========= */
+  .tab-pane { display: none; animation: fadeIn 0.6s ease; }
+  .tab-pane.active { display: block; }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .cat-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 40px;
+    align-items: start;
+  }
+  .cat-name {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .cat-name .subtle {
+    display: block;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 22px;
+    color: var(--gold);
+    margin-top: 12px;
+    letter-spacing: 0.01em;
+  }
+  .cat-intro {
+    font-family: var(--serif-jp);
+    font-size: 15.5px;
+    line-height: 2;
+    color: var(--ink-2);
+  }
+
+  /* ========= 総評 EDITOR'S ANALYSIS ========= */
+  .editor-analysis {
+    background: linear-gradient(180deg, #FDFBF4 0%, var(--bg-card) 100%);
+    border-left: 3px solid var(--gold);
+    padding: 32px 40px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+  .editor-analysis::before {
+    content: "＂";
+    position: absolute;
+    top: -10px;
+    right: 24px;
+    font-family: var(--serif-en);
+    font-size: 80px;
+    font-style: italic;
+    color: var(--gold-light);
+    opacity: 0.35;
+    line-height: 1;
+  }
+  .analysis-label {
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .analysis-label::before { content: "◆"; font-size: 8px; }
+  .analysis-label-jp {
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    margin-left: 4px;
+  }
+  .analysis-body {
+    font-family: var(--serif-jp);
+    font-size: 14.5px;
+    line-height: 2;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+  .analysis-body strong {
+    font-weight: 700;
+    color: var(--ink);
+    border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 1px;
+  }
+
+  /* ========= RANKING CARDS ========= */
+  .rankings {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .rank-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    padding: 40px 32px 36px;
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .rank-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.12);
+    border-color: var(--line-2);
+  }
+  .rank-card.first {
+    background: linear-gradient(180deg, #FFFEF5 0%, var(--bg-card) 40%);
+    border-color: var(--yellow-border);
+  }
+  .rank-card.first::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--yellow-light), var(--yellow), var(--yellow-light));
+  }
+  .rank-badge {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .rank-medal {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    font-style: italic;
+  }
+  .first .rank-medal { color: var(--yellow); }
+  .second .rank-medal { color: var(--gold-light); }
+  .third .rank-medal { color: var(--silver); }
+  .rank-label {
+    font-family: var(--sans-en);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .tool-name {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .tool-vendor {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--ink-muted);
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
+  .tool-tagline {
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink);
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+
+  /* ---- Info blocks (概要 / 料金) ---- */
+  .info-block {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .info-block:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 18px;
+  }
+  .info-label {
+    font-family: var(--sans-en);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-label .jp {
+    font-family: var(--serif-jp);
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+    font-size: 11.5px;
+    font-weight: 500;
+  }
+  .info-label::before {
+    content: "";
+    width: 12px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .info-body {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-2);
+  }
+  .price-list {
+    list-style: none;
+    padding: 0;
+  }
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px dotted var(--line);
+    gap: 12px;
+  }
+  .price-item:last-child { border-bottom: none; }
+  .price-tier {
+    font-family: var(--serif-jp);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .price-tier .tier-note {
+    display: block;
+    font-size: 10.5px;
+    color: var(--ink-muted);
+    font-weight: 400;
+    font-family: var(--sans-jp);
+    margin-top: 2px;
+  }
+  .price-cost {
+    font-family: var(--serif-en);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--ink);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .price-cost .pslash {
+    font-family: var(--sans-jp);
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-left: 2px;
+  }
+  .first .price-item { border-bottom-color: var(--yellow-light); }
+
+  .tool-strengths-label {
+    font-family: var(--sans-en);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .tool-strengths-label .jp {
+    font-family: var(--serif-jp);
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+    font-size: 11.5px;
+    font-weight: 500;
+  }
+  .tool-strengths-label::before {
+    content: "";
+    width: 12px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .strength-list {
+    list-style: none;
+    padding: 0;
+  }
+  .strength-list li {
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 7px;
+  }
+  .strength-list li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 7px;
+    color: var(--gold);
+  }
+
+  /* ========= MATRIX ========= */
+  .matrix-wrap {
+    margin-top: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    overflow: auto;
+  }
+  .matrix { width: 100%; border-collapse: collapse; min-width: 780px; }
+  .matrix th {
+    text-align: left;
+    padding: 24px 28px;
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+    background: var(--bg-elevated);
+  }
+  .matrix td {
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--serif-jp);
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  .matrix tr:last-child td { border-bottom: none; }
+  .matrix tr:hover td { background: #FDFBF4; }
+  .cat-cell { font-weight: 600; font-size: 15px; color: var(--ink); }
+  .cat-cell .emoji { margin-right: 12px; font-size: 16px; }
+  .rank-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px 5px 8px;
+    border-radius: 1px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .rank-tag-n {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+  }
+  .rank-1 { background: var(--yellow-bg); color: var(--navy); }
+  .rank-1 .rank-tag-n { color: var(--yellow); }
+  .rank-2 { background: var(--silver-bg); color: #555; }
+  .rank-2 .rank-tag-n { color: var(--silver); }
+  .rank-3 { background: var(--bronze-bg); color: var(--bronze); }
+  .rank-3 .rank-tag-n { color: var(--bronze); }
+
+  /* ========= USAGE PATTERNS ========= */
+  .patterns-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+  .pattern {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    padding: 36px 36px 32px;
+    display: flex;
+    gap: 28px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .pattern:hover {
+    border-color: var(--gold-light);
+    transform: translateY(-2px);
+  }
+  .pattern-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--line-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 26px;
+    color: var(--gold);
+  }
+  .pattern-body h4 {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  .pattern-body p {
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--ink-muted);
+  }
+  .pattern-tags {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ptag {
+    padding: 3px 10px;
+    border: 1px solid var(--line);
+    font-size: 11.5px;
+    font-family: var(--sans-en);
+    color: var(--ink-2);
+    letter-spacing: 0.04em;
+    background: var(--bg-elevated);
+  }
+
+  /* ========= NOTES/WARNINGS ========= */
+  .note-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 56px;
+  }
+  .note-card {
+    padding: 32px;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+  }
+  .note-card h5 {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .note-card h5::before {
+    content: "";
+    width: 4px;
+    height: 20px;
+    background: var(--gold);
+  }
+  .note-card p { font-size: 13px; line-height: 1.85; color: var(--ink-muted); }
+
+  /* ========= FOOTER ========= */
+  footer {
+    margin-top: 120px;
+    padding: 80px 48px 60px;
+    border-top: 1px solid var(--line-2);
+    background: var(--bg-elevated);
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 48px;
+  }
+  .footer-brand-text {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  .footer-brand-en {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-muted);
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .footer-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--ink-muted);
+    max-width: 420px;
+  }
+  .footer-col h6 {
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li {
+    font-family: var(--serif-jp);
+    font-size: 13.5px;
+    padding: 5px 0;
+    color: var(--ink-2);
+  }
+  .footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 32px;
+    border-top: 1px solid var(--line-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--sans-en);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+
+  /* ========= REVEAL ANIMATION ========= */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ========= UPDATED BADGE ========= */
+  .updated-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: var(--gold-bg);
+    color: var(--bronze);
+    font-family: var(--sans-en);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-left: 10px;
+    border-radius: 1px;
+    font-weight: 500;
+    vertical-align: 3px;
+  }
+
+  /* ========= TIMELINE ========= */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 40px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 8px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, var(--gold-light) 10%, var(--gold-light) 90%, transparent);
+  }
+  .t-item {
+    position: relative;
+    padding-bottom: 32px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 32px;
+    align-items: baseline;
+  }
+  .t-item:last-child { padding-bottom: 0; }
+  .t-item::before {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--gold);
+    z-index: 2;
+  }
+  .t-item.major::before {
+    background: var(--gold);
+    box-shadow: 0 0 0 6px var(--gold-bg);
+  }
+  .t-date {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--gold);
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+  }
+  .t-body h5 {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+  }
+  .t-body p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--ink-muted);
+  }
+  .t-tag {
+    display: inline-block;
+    font-family: var(--sans-en);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    margin-left: 10px;
+    color: var(--ink-muted);
+    vertical-align: 2px;
+  }
+
+  /* ========= STATS SECTION ========= */
+  .stats-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    margin-top: 40px;
+  }
+  .stat-big {
+    padding: 48px 36px;
+    border-right: 1px solid var(--line);
+    position: relative;
+  }
+  .stat-big:last-child { border-right: none; }
+  .stat-big::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .stat-num {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 12px;
+    display: block;
+  }
+  .stat-num .unit {
+    font-size: 24px;
+    margin-left: 2px;
+    color: var(--gold);
+  }
+  .stat-label {
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  .stat-source {
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .stats-insight {
+    margin-top: 32px;
+    padding: 28px 36px;
+    background: var(--gold-bg);
+    border-left: 3px solid var(--gold);
+  }
+  .stats-insight strong {
+    font-weight: 700;
+    color: var(--bronze);
+  }
+
+  /* ========= INDUSTRY MATRIX ========= */
+  .industry-matrix {
+    margin-top: 40px;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+  }
+  .industry-matrix table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+  }
+  .industry-matrix th {
+    padding: 20px 20px;
+    text-align: left;
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 13.5px;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--line-2);
+    border-right: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  .industry-matrix th:first-child {
+    width: 160px;
+    background: var(--bg-card);
+  }
+  .industry-matrix th.col-head {
+    text-align: center;
+    font-family: var(--sans-en);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: #FDFBF4;
+  }
+  .industry-matrix td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+    vertical-align: top;
+  }
+  .industry-matrix td:last-child, .industry-matrix th:last-child { border-right: none; }
+  .industry-matrix tr:last-child td { border-bottom: none; }
+  .industry-matrix td strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: var(--serif-jp);
+  }
+  .industry-matrix tr.industry-row th {
+    font-size: 14px;
+  }
+
+  /* ========= BUDGET GUIDE ========= */
+  .budget-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+  }
+  .budget-col {
+    padding: 40px 28px 32px;
+    border-right: 1px solid var(--line);
+    position: relative;
+  }
+  .budget-col:last-child { border-right: none; }
+  .budget-col.featured {
+    background: linear-gradient(180deg, #FFFEF5 0%, var(--bg-card) 100%);
+  }
+  .budget-col.featured::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--yellow);
+  }
+  .b-range {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--gold);
+    margin-bottom: 4px;
+    letter-spacing: -0.02em;
+  }
+  .b-label {
+    font-family: var(--sans-en);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 28px;
+  }
+  .b-name {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .b-desc {
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+    padding-bottom: 22px;
+    border-bottom: 1px dashed var(--line);
+  }
+  .b-tools-label {
+    font-family: var(--sans-en);
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+  .b-tools {
+    list-style: none;
+    padding: 0;
+  }
+  .b-tools li {
+    font-size: 13px;
+    padding: 4px 0;
+    color: var(--ink-2);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted var(--line);
+  }
+  .b-tools li:last-child { border-bottom: none; }
+  .b-tools li .t-cost {
+    font-family: var(--serif-en);
+    color: var(--ink-muted);
+    font-size: 12px;
+  }
+
+  /* ========= API PRICING ========= */
+  .api-table-wrap {
+    margin-top: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    overflow: auto;
+  }
+  .api-table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+  }
+  .api-table th {
+    background: var(--bg-elevated);
+    padding: 20px 24px;
+    font-family: var(--sans-en);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--ink-muted);
+    border-bottom: 1px solid var(--line);
+  }
+  .api-table th.num { text-align: right; }
+  .api-table td {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+  }
+  .api-table tr:last-child td { border-bottom: none; }
+  .api-table tr:hover td { background: #FDFBF4; }
+  .api-model {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .api-model .vendor {
+    display: block;
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--ink-muted);
+    margin-top: 2px;
+  }
+  .api-price {
+    font-family: var(--serif-en);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: right;
+    color: var(--ink);
+  }
+  .api-price .unit {
+    font-family: var(--sans-jp);
+    font-size: 11px;
+    color: var(--ink-muted);
+    margin-left: 2px;
+  }
+  .api-best { color: var(--gold); font-weight: 500; }
+
+  /* ========= SHADOW AI ========= */
+  .shadow-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    padding: 56px;
+    position: relative;
+  }
+  .shadow-wrap::before {
+    content: "⚠";
+    position: absolute;
+    top: 36px;
+    right: 48px;
+    font-size: 56px;
+    color: var(--gold-light);
+    opacity: 0.3;
+    line-height: 1;
+  }
+  .shadow-stat {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .shadow-stat .unit {
+    font-size: 36px;
+    color: var(--gold);
+  }
+  .shadow-headline {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .shadow-source {
+    font-family: var(--sans-en);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .shadow-body h5 {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .shadow-body p {
+    font-size: 13.5px;
+    line-height: 1.9;
+    color: var(--ink-2);
+    margin-bottom: 18px;
+  }
+  .shadow-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+  }
+  .shadow-list li {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--ink-2);
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .shadow-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+    font-family: var(--serif-en);
+    font-weight: 300;
+  }
+
+  /* ========= FAQ ========= */
+  .faq-list {
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    padding: 28px 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    font-family: var(--serif-jp);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--ink);
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  .faq-q:hover { background: #FDFBF4; }
+  .faq-q .q-mark {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 28px;
+    color: var(--gold);
+    line-height: 0.9;
+    flex-shrink: 0;
+  }
+  .faq-q .q-text { flex: 1; line-height: 1.5; }
+  .faq-q .q-toggle {
+    font-family: var(--serif-en);
+    font-weight: 300;
+    color: var(--ink-muted);
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+  .faq-item.open .q-toggle { transform: rotate(45deg); color: var(--gold); }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 40px 0 88px;
+  }
+  .faq-item.open .faq-a {
+    max-height: 800px;
+    padding: 0 40px 28px 88px;
+  }
+  .faq-a p {
+    font-size: 14px;
+    line-height: 2;
+    color: var(--ink-2);
+    font-family: var(--serif-jp);
+  }
+
+  /* ========= GLOSSARY ========= */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 40px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+  }
+  .gl-item {
+    padding: 28px 28px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .gl-item:nth-child(3n) { border-right: none; }
+  .gl-item:nth-last-child(-n+3) { border-bottom: none; }
+  .gl-term {
+    font-family: var(--serif-jp);
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .gl-term .gl-en {
+    font-family: var(--serif-en);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--gold);
+  }
+  .gl-desc {
+    font-size: 12.5px;
+    line-height: 1.75;
+    color: var(--ink-muted);
+    margin-top: 8px;
+  }
+
+  /* ========= RESPONSIVE for new sections ========= */
+  @media (max-width: 1100px) {
+    .stats-wrap { grid-template-columns: repeat(2, 1fr); }
+    .stat-big { border-right: none; border-bottom: 1px solid var(--line); }
+    .stat-big:nth-child(even) { border-right: none; }
+    .stat-big:nth-child(2n+1) { border-right: 1px solid var(--line); }
+    .budget-grid { grid-template-columns: repeat(2, 1fr); }
+    .budget-col { border-right: none; border-bottom: 1px solid var(--line); }
+    .budget-col:nth-child(2n+1) { border-right: 1px solid var(--line); }
+    .shadow-wrap { grid-template-columns: 1fr; padding: 40px; }
+    .glossary-grid { grid-template-columns: repeat(2, 1fr); }
+    .gl-item:nth-child(3n) { border-right: 1px solid var(--line); }
+    .gl-item:nth-child(2n) { border-right: none; }
+    .t-item { grid-template-columns: 100px 1fr; gap: 20px; }
+  }
+  @media (max-width: 720px) {
+    .stats-wrap, .budget-grid, .glossary-grid { grid-template-columns: 1fr; }
+    .stat-big, .budget-col, .gl-item { border-right: none !important; }
+    .shadow-wrap { padding: 28px 24px; }
+    .shadow-stat { font-size: 64px; }
+    .faq-q, .faq-item.open .faq-a { padding-left: 24px; padding-right: 24px; }
+    .faq-item.open .faq-a { padding-left: 60px; }
+    .timeline { padding-left: 32px; }
+    .t-item { grid-template-columns: 1fr; gap: 6px; }
+    .t-date { font-size: 18px; }
+  }
+
+  /* ========= RESPONSIVE ========= */
+  @media (max-width: 1100px) {
+    .rankings { grid-template-columns: 1fr; }
+    .cat-header { grid-template-columns: 1fr; gap: 32px; }
+    .criteria-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    .criterion { border-right: none; padding: 0; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .patterns-grid { grid-template-columns: 1fr; }
+    .note-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .section, .hero { padding-left: 24px; padding-right: 24px; }
+    .topbar-inner { padding: 14px 24px; }
+    .hero { padding-top: 80px; padding-bottom: 60px; }
+    .hero h1 { font-size: 40px; }
+    .cat-name { font-size: 34px; }
+    .criteria-wrap { padding: 32px 24px; }
+    .tab-scroll-wrap { margin-left: -24px; margin-right: -24px; padding-left: 24px; padding-right: 24px; top: 62px; }
+    .matrix th, .matrix td { padding: 16px 14px; font-size: 12px; }
+    .footer-bottom { flex-direction: column; gap: 12px; }
+    .editor-analysis { padding: 24px 24px 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOPBAR ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark"><em>AI</em>·Atlas</span>
+      <span class="brand-sep"></span>
+      <span class="brand-text">業務AIツール年鑑</span>
+    </div>
+    <div class="topbar-meta">
+      <span><span class="meta-dot"></span>LIVE · 2026.05.11</span>
+      <span>VOL. 04 / ISSUE 04</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="eyebrow">The Definitive Ranking · 2026 Edition</div>
+  <h1>
+    いま、業務で本当に<br>
+    使える<span class="italic">AI</span>を、<br>
+    <span class="num">10</span>分野・<span class="num">3</span>位まで。
+  </h1>
+  <p class="hero-lead">
+    2026年5月11日時点の最新動向 ——GPT-5.5 Instantの全ユーザーデフォルト化(5/5)、Anthropic×SpaceXでClaude Codeレート上限2倍(5/6)、GPT-5.5の登場(4/23)を反映し、日本市場での導入実績・業務安全性・日本語品質を基準に、10分野×3ツールのランキング、業種別・予算別の推奨構成、タイムライン、API料金、FAQ、用語集までを収録した完全版。
+  </p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="n">10</span><span class="l">Categories</span></div>
+    <div class="hero-stat"><span class="n">30</span><span class="l">Tools Ranked</span></div>
+    <div class="hero-stat"><span class="n">13</span><span class="l">Sections</span></div>
+    <div class="hero-stat"><span class="n">05·11</span><span class="l">Updated 2026</span></div>
+  </div>
+</section>
+
+<!-- ============ CRITERIA ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">I</span>選定基準</h2>
+  <p class="section-sub">
+    「最も活用できる・口コミ評価の高いツール」を特定するため、日本市場の業務実装を想定した5軸で順位付けしています。
+  </p>
+  <div class="criteria-wrap">
+    <div class="criteria-grid">
+      <div class="criterion">
+        <div class="criterion-num">01</div>
+        <div class="criterion-title">日本での導入実績</div>
+        <div class="criterion-stars">★★★★★</div>
+        <div class="criterion-body">国内シェア・企業導入率。顧客が納得しやすい選択肢の土台。</div>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">02</div>
+        <div class="criterion-title">日本語品質</div>
+        <div class="criterion-stars">★★★★☆</div>
+        <div class="criterion-body">出力の自然さ・敬語・業界用語対応。国内業務の必須要件。</div>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">03</div>
+        <div class="criterion-title">業務安全性</div>
+        <div class="criterion-stars">★★★★☆</div>
+        <div class="criterion-body">商用可否・セキュリティ認証・データ学習除外。法務リスク回避。</div>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">04</div>
+        <div class="criterion-title">機能完成度</div>
+        <div class="criterion-stars">★★★☆☆</div>
+        <div class="criterion-body">最新モデル・連携数・独自機能。用途特化の実力。</div>
+      </div>
+      <div class="criterion">
+        <div class="criterion-num">05</div>
+        <div class="criterion-title">コストパフォーマンス</div>
+        <div class="criterion-stars">★★★☆☆</div>
+        <div class="criterion-body">料金と機能のバランス。中小企業での採用可否。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">II</span>2026年 AI業界タイムライン</h2>
+  <p class="section-sub">
+    本ランキングの根拠となる、2026年1月〜4月の主要な業界動向。料金プランや機能構成はこの時期に大きく変動しました。
+  </p>
+  <div class="timeline">
+    <div class="t-item major">
+      <div class="t-date">01 · 12</div>
+      <div class="t-body">
+        <h5>Claude Cowork 一般公開<span class="t-tag">Anthropic</span></h5>
+        <p>非エンジニア向けの自律AIワーク機能が1/16にPro全ユーザーに開放。ファイル・ワークフロー自動化の新標準に。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">01 · 15</div>
+      <div class="t-body">
+        <h5>ChatGPT Go グローバル展開<span class="t-tag">OpenAI</span></h5>
+        <p>$8/月の新プランを170+カ国で一斉展開。日本も対象、個人・学生向けの新選択肢として急速普及。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">01月</div>
+      <div class="t-body">
+        <h5>Genspark 日本法人設立<span class="t-tag">MainFunc</span></h5>
+        <p>ソースネクストを公式代理店として国内展開本格化。ARR $50Mを5ヶ月で達成のユニコーン企業。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">02 · 05</div>
+      <div class="t-body">
+        <h5>Claude Opus 4.6 リリース<span class="t-tag">Anthropic</span></h5>
+        <p>1Mトークン対応、Agent Teams機能搭載。SWE-benchで77.2%を記録。2月時点で最高峰のコーディング性能。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">02月</div>
+      <div class="t-body">
+        <h5>Free・Goプランで広告表示開始<span class="t-tag">OpenAI・US</span></h5>
+        <p>米国のFreeおよびGoプランでスポンサード広告を順次導入。低価格プランのビジネスモデル転換。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">03 · 24</div>
+      <div class="t-body">
+        <h5>Sora 提供終了<span class="t-tag">OpenAI</span></h5>
+        <p>動画生成市場を牽引した本家Soraが独立サービスとして終了。リソースをエージェント開発に集中。市場は三強体制に。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">03月</div>
+      <div class="t-body">
+        <h5>GPT-5.4 全プラン展開<span class="t-tag">OpenAI</span></h5>
+        <p>ネイティブComputer Use機能を搭載。Codex・API同時対応で、エージェント時代の本格到来を告げる。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">04 · 09</div>
+      <div class="t-body">
+        <h5>ChatGPT Pro $100 新設<span class="t-tag">OpenAI</span></h5>
+        <p>$20 Plusと$200 Proの中間を埋める新プラン。Codex 5倍の使用量、Claude Maxに直接対抗する構成。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">04 · 16</div>
+      <div class="t-body">
+        <h5>Claude Opus 4.7 リリース<span class="t-tag">Anthropic</span></h5>
+        <p>xhigh effort・task budgets・3x画像解像度を追加。CursorBench 70%達成。最長14時間30分の自律実行記録。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">04 · 21</div>
+      <div class="t-body">
+        <h5>ChatGPT Images 2.0 リリース<span class="t-tag">OpenAI</span></h5>
+        <p>日本語を含む密なテキスト描画に世界初対応。2K解像度・思考モード搭載でImage Arena 1位。DALL-E 2/3は5/12終了予定。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">04 · 21</div>
+      <div class="t-body">
+        <h5>Claude Code Pro除外テスト→即撤回<span class="t-tag">Anthropic</span></h5>
+        <p>Pro($20)からClaude Codeを除外するテスト実施、同日中に撤回。料金体系の流動性を象徴する事件に。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">04 · 23</div>
+      <div class="t-body">
+        <h5>GPT-5.5 Thinking/Pro リリース<span class="t-tag">OpenAI</span></h5>
+        <p>GPQA Diamond 93.5%、Terminal-Bench 2.0 82.7%達成。ChatGPT Plus/Pro/Business/Enterpriseに展開。エージェント型コーディングと知識業務で大幅改善。API(4/24)も間もなく開放。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">05 · 05</div>
+      <div class="t-body">
+        <h5>GPT-5.5 Instant が全ユーザーのデフォルトに<span class="t-tag">OpenAI</span></h5>
+        <p>GPT-5.3 Instantに替わり全ユーザーの標準モデルに。高リスクプロンプトでのハルシネーション52.5%削減。Plus/Proユーザー向けにGmail/過去チャット/ファイルを参照するパーソナライズ機能も強化。</p>
+      </div>
+    </div>
+    <div class="t-item major">
+      <div class="t-date">05 · 06</div>
+      <div class="t-body">
+        <h5>Anthropic × SpaceX コンピュート提携<span class="t-tag">Anthropic</span></h5>
+        <p>SpaceXのColossus 1データセンター(300MW超/NVIDIA GPU 22万台以上)を利用する大型提携を即日発表。Claude Codeの5時間レート上限を即日2倍に引き上げ、Pro/Maxのピーク時間帯制限も撤廃。</p>
+      </div>
+    </div>
+    <div class="t-item">
+      <div class="t-date">05 · 07</div>
+      <div class="t-body">
+        <h5>ChatGPT 広告テスト開始・for Excel/Sheets 全般提供<span class="t-tag">OpenAI</span></h5>
+        <p>ChatGPTに広告を表示するテストを発表(Free/Goプランが対象)。ChatGPT for ExcelとGoogle Sheetsが Business/Enterprise向けに全世界展開。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADOPTION DATA (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">III</span>国内導入実態データ</h2>
+  <p class="section-sub">
+    BOXIL(スマートキャンプ)が2026年1月に国内企業9,734名を対象に実施した調査からの抽出。シェアと成果は必ずしも一致しない、興味深い実態が浮かび上がります。
+  </p>
+
+  <div class="stats-wrap">
+    <div class="stat-big">
+      <span class="stat-num">28.4<span class="unit">%</span></span>
+      <div class="stat-label">企業の生成AI導入率</div>
+      <div class="stat-source">BOXIL · 2026.01</div>
+    </div>
+    <div class="stat-big">
+      <span class="stat-num">56.8<span class="unit">%</span></span>
+      <div class="stat-label">ChatGPTの企業利用率</div>
+      <div class="stat-source">ICT総研 · 2026.02</div>
+    </div>
+    <div class="stat-big">
+      <span class="stat-num">14.4<span class="unit">%</span></span>
+      <div class="stat-label">シャドーAI利用率</div>
+      <div class="stat-source">会社未導入だが個人で利用</div>
+    </div>
+    <div class="stat-big">
+      <span class="stat-num">5.4<span class="unit">%</span></span>
+      <div class="stat-label">月40h+削減達成率</div>
+      <div class="stat-source">ChatGPTユーザー中</div>
+    </div>
+  </div>
+
+  <div class="stats-insight">
+    <strong>重要な示唆：シェア ≠ 成果。</strong>ChatGPTとCopilotは利用率で圧倒するものの、月40時間以上の削減達成者はそれぞれ5.4%、6.1%に留まる。多くのユーザーが「メール下書き・要約」など初歩的活用に止まり、本格的なROIを生んでいない。<strong>シェア下位の特化型ツール利用者の方が、高い削減効果を実現している</strong>という逆転現象が観測されています。
+  </div>
+</section>
+
+<!-- ============ TABS ============ -->
+<section class="section">
+  <h2 class="section-title"><span class="num-chip">IV</span>分野別 — トップ3</h2>
+  <p class="section-sub">10の業務分野それぞれで、1位から3位までを選出。タブを切り替えて各分野を比較できます。各分野の冒頭には選定理由を示す「総評」を掲載。</p>
+
+  <div class="tabs-container">
+    <div class="tab-scroll-wrap">
+      <div class="tabs-nav" id="tabsNav">
+        <button class="tab-btn active" data-tab="t1"><span class="tnum">01</span>文章生成</button>
+        <button class="tab-btn" data-tab="t2"><span class="tnum">02</span>画像生成</button>
+        <button class="tab-btn" data-tab="t3"><span class="tnum">03</span>動画生成</button>
+        <button class="tab-btn" data-tab="t4"><span class="tnum">04</span>音楽生成</button>
+        <button class="tab-btn" data-tab="t5"><span class="tnum">05</span>文字起こし・議事録</button>
+        <button class="tab-btn" data-tab="t6"><span class="tnum">06</span>スライド作成</button>
+        <button class="tab-btn" data-tab="t7"><span class="tnum">07</span>情報収集・リサーチ</button>
+        <button class="tab-btn" data-tab="t8"><span class="tnum">08</span>コーディング支援</button>
+        <button class="tab-btn" data-tab="t9"><span class="tnum">09</span>業務自動化</button>
+        <button class="tab-btn" data-tab="t10"><span class="tnum">10</span>情報整理</button>
+      </div>
+    </div>
+
+    <!-- ===== TAB 1: 文章生成 ===== -->
+    <div class="tab-pane active" id="t1">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">文章生成<span class="subtle">Text Generation AI</span></div>
+        </div>
+        <div class="cat-intro">国内シェア・企業導入率で圧倒するChatGPTを軸に、Office連携のCopilot、Google連携のGeminiが続く三強構造が定着。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          日本企業の生成AI利用実態調査では<strong>ChatGPTが国内企業56.8%、個人利用36.2%と圧倒的シェア</strong>を持ち、口コミ・知名度・機能完成度すべてで首位を維持。2026年5月5日にはGPT-5.5 Instantが全ユーザーのデフォルトモデルに昇格し、高リスクプロンプトでのハルシネーションを<strong>52.5%削減</strong>。GmailやファイルからのパーソナライズAIも強化された。2位のMicrosoft Copilotは日本企業の文書業務カテゴリで<strong>38.8%</strong>のシェアを獲得し、Office統合という観点で事実上の業務標準に。Geminiは2026年に入り急成長（Webシェア21.5%）、Google Workspaceユーザーの最優先候補に。Claudeは日本語の自然さで定評があるが、国内シェア4〜6%と導入実績ではまだ及ばず、今回はトップ3外。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <!-- 1st: ChatGPT -->
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">ChatGPT</div>
+          <div class="tool-vendor">OpenAI — GPT-5.5 Instant</div>
+          <div class="tool-tagline">国内利用率36.2%、企業導入56.8%の圧倒的No.1</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2022年11月リリース以来、生成AI市場の基準となる対話型AI。2026年4月23日公開のGPT-5.5は推論・コーディング・エージェントを集約した現行フラッグシップ。5月5日からGPT-5.5 Instantが全ユーザーのデフォルトモデルになり、ハルシネーション大幅減少・Gmail連携のパーソナライズも強化。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">米国は広告付き</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Go<span class="tier-note">2026/1新設・広告付</span></span><span class="price-cost">$8<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Plus</span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro<span class="tier-note">2026/4/9新設・Codex 5x</span></span><span class="price-cost">$100<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro Max<span class="tier-note">Codex 20x</span></span><span class="price-cost">$200<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business<span class="tier-note">2名〜</span></span><span class="price-cost">$25<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>日本でのシェア・知名度ともに圧倒的</li>
+            <li>画像・音声・エージェントすべて1つで完結</li>
+            <li>顧客への説明コストが最小</li>
+          </ul>
+        </div>
+
+        <!-- 2nd: Microsoft Copilot -->
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Microsoft 365<br>Copilot</div>
+          <div class="tool-vendor">Microsoft</div>
+          <div class="tool-tagline">Office中心の日本企業で事実上の標準</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Microsoft 365製品群（Word・Excel・Outlook・Teams等）に統合されたAIアシスタント。2024年リリース以降、日本企業の文書業務支援カテゴリで38.8%シェアを獲得し、社内インフラの一部として機能。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Copilot Pro<span class="tier-note">個人</span></span><span class="price-cost">¥3,200<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">M365 Copilot<span class="tier-note">法人・ライセンス別</span></span><span class="price-cost">¥4,497<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Copilot Studio</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>Word・Excel・Outlook完全統合</li>
+            <li>法人向けセキュリティ最高水準</li>
+            <li>既存ライセンスからの追加導入が容易</li>
+          </ul>
+        </div>
+
+        <!-- 3rd: Gemini -->
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">Gemini</div>
+          <div class="tool-vendor">Google — 3.1 Pro</div>
+          <div class="tool-tagline">Web訪問シェア21.5% — 1年で4倍の急成長</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Googleが開発する対話型AI。最新モデルGemini 3.1 Proは推論ベンチマークARC-AGI-2で77.1%を達成。100万トークンの長文処理とGoogle Workspace深度統合が最大の武器。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free</span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Google AI Pro</span><span class="price-cost">$19.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Google AI Ultra</span><span class="price-cost">$124.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Gemini for Workspace<span class="tier-note">法人</span></span><span class="price-cost">$20<span class="pslash">/人・月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>Gmail・Drive・Docs直結</li>
+            <li>100万トークンの長文処理</li>
+            <li>無料枠でも高性能モデル利用可</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 2: 画像生成 ===== -->
+    <div class="tab-pane" id="t2">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">画像生成<span class="subtle">Image Generation AI</span></div>
+        </div>
+        <div class="cat-intro">4月21日リリースのChatGPT Images 2.0が市場を再定義。商用安全性のFirefly、アート性のMidjourneyが続く。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>2026年4月21日のChatGPT Images 2.0リリースが画像生成市場を再定義した</strong>。日本語・韓国語・中国語・ヒンディー語・ベンガル語での密なテキスト描画が世界初実用レベルに到達し、業務資料・ポスター・SNS素材で圧倒的優位を獲得。Adobe Fireflyは<strong>商用安全性で依然として法人導入の本命</strong>、既存Creative Cloudユーザーなら追加コストなしで導入可能。Midjourneyは芸術品質ではいまだトップだが、日本語テキスト対応とビジネス汎用性ではChatGPT Images 2.0が上回った。※DALL-E 2/3は2026年5月12日提供終了予定。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <!-- 1st: ChatGPT Images 2.0 -->
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">ChatGPT Images 2.0<span class="updated-badge">NEW</span></div>
+          <div class="tool-vendor">OpenAI — gpt-image-2</div>
+          <div class="tool-tagline">日本語テキスト描画で世界初、実用レベルに到達</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2026年4月21日リリースのOpenAI最新モデル。O系推論機能を初搭載し、画像生成前に構造をリサーチ・計画する"Agentic画像生成"を実現。Image Arenaで1位を獲得。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">Instant モード・制限あり</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">ChatGPT Go</span><span class="price-cost">$8<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">ChatGPT Plus<span class="tier-note">Thinking モード含む</span></span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">ChatGPT Pro<span class="tier-note">新$100 / 旧$200</span></span><span class="price-cost">$100〜$200</span></li>
+              <li class="price-item"><span class="price-tier">API<span class="tier-note">1枚あたり</span></span><span class="price-cost">$0.04〜$0.35</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>日本語の密なテキストレンダリングが可能</li>
+            <li>ネイティブ推論で複雑な構成も破綻なし</li>
+            <li>ポスター・バナー・メニューで無双</li>
+          </ul>
+        </div>
+
+        <!-- 2nd: Adobe Firefly -->
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Adobe Firefly</div>
+          <div class="tool-vendor">Adobe</div>
+          <div class="tool-tagline">商用安全性で法人導入の本命</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Adobeが開発した商用安全設計の画像生成AI。学習データにAdobe Stockと著作権切れコンテンツのみを使用し、生成画像の著作権リスクが業界最小。Photoshop・Illustratorへのネイティブ統合も強力。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月25クレジット</span></span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Firefly Standard</span><span class="price-cost">¥1,680<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Firefly Pro</span><span class="price-cost">¥4,780<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Creative Cloud<span class="tier-note">付属</span></span><span class="price-cost">¥7,780<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>著作権リスク最小の学習データ</li>
+            <li>Adobe製品とのシームレスな統合</li>
+            <li>エンタープライズ案件で安心</li>
+          </ul>
+        </div>
+
+        <!-- 3rd: Midjourney -->
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">Midjourney V7</div>
+          <div class="tool-vendor">Midjourney Inc.</div>
+          <div class="tool-tagline">アート性でいまだ頂点</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2021年設立の独立系AI研究所が開発。映画的・絵画的スタイルで最高品質の画像を生成。DiscordボットとしてスタートしたがWeb版も充実し、2026年現在は併用が主流。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Basic</span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Standard</span><span class="price-cost">$30<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$60<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Mega</span><span class="price-cost">$120<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>芸術的品質・映画的表現で業界トップ</li>
+            <li>Omni Referenceでキャラクター一貫性</li>
+            <li>SNS・広告ビジュアル用途に最適</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 3: 動画生成 ===== -->
+    <div class="tab-pane" id="t3">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">動画生成<span class="subtle">Video Generation AI</span></div>
+        </div>
+        <div class="cat-intro">2026年3月24日のSora終了で三強時代に。品質のRunway、独自機能のVeo、無料枠のKlingが市場を分け合う。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>2026年3月24日のSora終了で動画生成市場は三強体制に収束</strong>した。Runway Gen-4.5は映像品質・一貫性で業界評価が高く、プロ映像制作現場での採用実績も豊富で1位。Google Veo 3.1は<strong>ネイティブ4K出力と音声同時生成という独自機能</strong>で差別化し、Google AI Pro月$19.99で利用できるコスパも強み。Kling 2.6は無料枠の豊富さと最大3分の長尺生成でコストパフォーマンス最強だが、<strong>中国系ツールのため法務確認は必須</strong>。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Runway Gen-4.5</div>
+          <div class="tool-vendor">Runway ML</div>
+          <div class="tool-tagline">プロ用途の本命、ハリウッドでも検証採用</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2018年設立のAI動画生成パイオニア。Gen-4.5は業界ベンチマークで高評価を維持し、モーションブラシ・キャラクター一貫性など細部まで制御可能。映像制作プロの定番。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">125クレジット</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Standard</span><span class="price-cost">$15<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$35<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Unlimited</span><span class="price-cost">$95<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>映像品質・物理シミュレーション最高峰</li>
+            <li>モーションブラシで精密な動き制御</li>
+            <li>プロ映像制作スタジオの採用実績</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Google Veo 3.1</div>
+          <div class="tool-vendor">Google DeepMind</div>
+          <div class="tool-tagline">4K出力と音声同時生成の独自機能</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">GoogleのAI動画生成モデル。セリフ・効果音・BGMまで1回で生成できる現状唯一クラスのツール。Google AI Pro/Ultraに含まれるため、Geminiユーザーは追加コスト少で利用可能。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Google AI Pro<span class="tier-note">Veo含む</span></span><span class="price-cost">$19.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Google AI Ultra</span><span class="price-cost">$124.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Vertex AI<span class="tier-note">企業向けAPI</span></span><span class="price-cost">従量課金</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>ネイティブ4K出力</li>
+            <li>映像+音声ワンパス生成</li>
+            <li>Googleエコシステム準拠</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">Kling 2.6</div>
+          <div class="tool-vendor">Kuaishou Technology</div>
+          <div class="tool-tagline">業界屈指の無料枠、最大3分の長尺</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">中国快手（Kuaishou）が開発した動画生成AI。2024年6月リリース、2026年現在v2.6。毎日66クレジットの無料枠があり、最大3分動画対応。アジア系人物の描写が得意。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">毎日66クレジット</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Standard</span><span class="price-cost">$8<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$33<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Premier</span><span class="price-cost">$65<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>無料枠の豊富さが業界トップ</li>
+            <li>最大3分の長尺動画生成</li>
+            <li>※利用規約は都度要確認</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 4: 音楽生成 ===== -->
+    <div class="tab-pane" id="t4">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">音楽生成<span class="subtle">Music Generation AI</span></div>
+        </div>
+        <div class="cat-intro">業務利用では法的リスクが最大の判断軸。日本発ロイヤリティフリーのSoundrawが業務向け最有力。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          SunoとUdioは著作権訴訟の影響を受けており、<strong>Warner・UMGとは和解済みだが欧州からの提訴やダウンロード制限などリスクが残る</strong>。日本発のSoundrawは全楽曲ロイヤリティフリーで商用利用完全対応、<strong>法務リスクゼロ</strong>という観点から業務用途の1位に据えた。Sunoは市場シェア・品質で依然トップだが、業務用途では契約前に最新の利用規約とダウンロード制限を確認する必要がある。Udioは音質で最高峰だがユーザーベースは小さく、特定用途向け。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Soundraw</div>
+          <div class="tool-vendor">Soundraw Inc. — 日本発</div>
+          <div class="tool-tagline">全楽曲ロイヤリティフリー、訴訟リスクゼロ</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">日本発のAI音楽生成サービス。ジャンル・ムード・長さを指定するだけで無限に楽曲を生成可能。全楽曲がロイヤリティフリー、企業の法務審査も通りやすい商用安全設計。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">試聴のみ</span></span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Creator</span><span class="price-cost">$17<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Artist</span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Unlimited</span><span class="price-cost">$50<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>著作権フリー・商用利用完全対応</li>
+            <li>日本語サポート・国産の安心感</li>
+            <li>YouTube・企業動画BGMで最安全</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Suno v5.5</div>
+          <div class="tool-vendor">Suno AI</div>
+          <div class="tool-tagline">市場シェア最大、歌モノの完成度No.1</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2023年12月公開、AI音楽生成市場の最大手。有料登録者200万人、年間売上$300M規模。2026年3月のv5.5で音声クローン・カスタムモデル・Suno Studio(DAW)を搭載。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">1日10曲</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Premier</span><span class="price-cost">$30<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>日本語歌詞にも対応</li>
+            <li>ボーカル品質が圧倒的</li>
+            <li>※訴訟動向は要確認</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">Udio v1.5</div>
+          <div class="tool-vendor">Udio</div>
+          <div class="tool-tagline">48kHzステレオ、プロ品質の音質</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2024年4月リリース。Sunoより後発だが、楽器分離・キー制御・インペインティング等で音質面では業界最高。プロのミュージシャンやオーディオファイル層から高評価。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月600曲</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Standard</span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$30<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>48kHzステレオの高音質出力</li>
+            <li>部分修正(インペインティング)機能</li>
+            <li>プロミュージシャンから高評価</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 5: 文字起こし ===== -->
+    <div class="tab-pane" id="t5">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">文字起こし・議事録<span class="subtle">Transcription & Minutes</span></div>
+        </div>
+        <div class="cat-intro">日本語精度・セキュリティ・法人実績で国産ツールが優位。tl;dvは無料枠の強さで国際会議用の次点。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          日本語業務では国産・法人対応特化の3社が強い。<strong>Nottaは累計1,000万ユーザーで日本市場シェア最大</strong>、58言語対応と辞書登録機能で営業・インタビュー用途にも対応。LINE WORKS AiNoteは<strong>ISO27001認証・SSO対応で法人セキュリティ最強クラス</strong>、人数無制限の料金体系で大企業展開に適する。スマート書記は業界用語の認識精度で国産随一、学習型で継続利用により精度が向上。<strong>tl;dvはG2で4.7/5の高評価</strong>だが、UI完全英語のため国内トップ3外（次点扱い）。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Notta</div>
+          <div class="tool-vendor">Notta株式会社</div>
+          <div class="tool-tagline">日本市場シェア最大・累計1,000万ユーザー</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">日本市場特化のAI文字起こしサービス。日本語認識精度98.86%(自社公表値)、58言語対応。Zoom・Teams・Google Meet全対応で、スマホアプリで対面会議にも使える。累計4,000社超の導入実績。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月120分・1回3分まで</span></span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Premium<span class="tier-note">年払い/月1,800分</span></span><span class="price-cost">¥1,185<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Premium<span class="tier-note">月払い</span></span><span class="price-cost">¥2,200<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business<span class="tier-note">無制限・複数アカウント</span></span><span class="price-cost">¥3,960<span class="pslash">/人・月〜</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise<span class="tier-note">51名〜</span></span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>日本市場特化、辞書登録対応</li>
+            <li>58言語対応で多言語会議もカバー</li>
+            <li>スマホアプリで対面会議にも対応</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">LINE WORKS AiNote</div>
+          <div class="tool-vendor">LINE WORKS</div>
+          <div class="tool-tagline">ISO27001準拠、法人セキュリティ最強クラス</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">CLOVA Noteの法人版。文字正解率90.8%、数字認識率80.3%、事前設定なしで話者自動分離。日英中韓の4言語に対応し、累計登録者100万人の実績。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">30日無料トライアル</span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Standard<span class="tier-note">人数無制限</span></span><span class="price-cost">¥19,800<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>ISO27001認証・エンタープライズ対応</li>
+            <li>事前設定なしで話者自動分離</li>
+            <li>利用人数無制限の料金体系</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">スマート書記</div>
+          <div class="tool-vendor">Epsilon Co., Ltd.<br>(旧Otolio)</div>
+          <div class="tool-tagline">業界用語・専門用語で国産随一</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">日本のEpsilon社が開発する法人向けAI議事録ツール。使うほど認識精度が向上する学習機能が特徴。用語登録不要で各社に最適化される設計で、法人利用で高い定評を持つ。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">14日無料トライアル</span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Standard<span class="tier-note">1時間あたり</span></span><span class="price-cost">¥198〜</span></li>
+              <li class="price-item"><span class="price-tier">Business・Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>業界特有の用語認識に強い</li>
+            <li>学習型で精度が継続的に向上</li>
+            <li>1時間198円〜の業界最安水準</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 6: スライド (UPDATED) ===== -->
+    <div class="tab-pane" id="t6">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">スライド作成<span class="subtle">Presentation AI</span></div>
+        </div>
+        <div class="cat-intro">リサーチから完成までワンストップのGensparkが品質で他を引き離す。Gamma・イルシルが続く構図。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>Genspark AI Slidesは、単なるスライド生成を超えた「リサーチ→構成→デザイン」の全自動化で完成品質が頭一つ抜けている</strong>。Fact Check機能も内蔵し、事実性を担保したスライドが自動生成される点は業務用途で決定的。Gammaは海外ツールで最も日本語対応が自然、速度も速く短時間で仕上げる用途に最適。イルシルは<strong>日本企業の稟議書・提案書など定型フォーマットに完全対応した国産</strong>で、日本ビジネス文化に特化した資料作成の最優良選択肢。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <!-- 1st: Genspark (NEW) -->
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Genspark AI Slides<span class="updated-badge">NEW #1</span></div>
+          <div class="tool-vendor">MainFunc — 日本法人あり</div>
+          <div class="tool-tagline">リサーチから完成品質まで全自動、Fact Check内蔵</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">米Palo Alto本社のMainFunc社が開発するオールインワンAIワークスペース。9つのLLMを統合し、テーマ入力だけでWeb上の情報収集から構成案作成・デザイン適用まで自動完了。2026年1月に日本法人設立、ソースネクストが公式代理店。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">毎日200クレジット</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Plus</span><span class="price-cost">$24.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$249.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">ソースネクスト<span class="tier-note">1年版</span></span><span class="price-cost">¥37,680</span></li>
+              <li class="price-item"><span class="price-tier">ソースネクスト<span class="tier-note">3年版</span></span><span class="price-cost">¥101,704</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>PowerPoint/PDF/Google Slides出力対応</li>
+            <li>PDF・Word・Excelを読込んでスライド化</li>
+            <li>Fact Check機能で事実性担保</li>
+            <li>AI Chatと画像生成も無制限で併用可</li>
+          </ul>
+        </div>
+
+        <!-- 2nd: Gamma -->
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Gamma</div>
+          <div class="tool-vendor">Gamma Tech, Inc.</div>
+          <div class="tool-tagline">海外ツール最良の日本語対応・速度</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2023年米国スタートアップが開発したAIスライドツール。カード型構造でデザイン自動最適化に特化。機械翻訳のような不自然さがない自然な日本語出力と圧倒的なスピードが特徴。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">400クレジット</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Plus</span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro<span class="tier-note">無制限</span></span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>ビジネス文書として十分な日本語品質</li>
+            <li>テキスト入力だけで数分で完成</li>
+            <li>PowerPoint・PDF形式で出力可</li>
+          </ul>
+        </div>
+
+        <!-- 3rd: イルシル -->
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">イルシル</div>
+          <div class="tool-vendor">日本発</div>
+          <div class="tool-tagline">3,000以上の日本語テンプレート</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">日本企業が開発した日本ビジネスシーン特化のスライド生成AI。稟議書・提案書・議事録など日本の商習慣に即した3,000以上のテンプレートを搭載。UI完全日本語対応。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">枚数制限・ロゴあり</span></span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Personal</span><span class="price-cost">¥1,680<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business</span><span class="price-cost">¥2,980<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>日本語特化型・国産の安心感</li>
+            <li>日本ビジネス文書の定型に最適化</li>
+            <li>UI完全日本語対応</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 7: リサーチ ===== -->
+    <div class="tab-pane" id="t7">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">情報収集・リサーチ<span class="subtle">AI Research</span></div>
+        </div>
+        <div class="cat-intro">出典付きのPerplexity、9LLM統合のGenspark、ソース限定のNotebookLM。3つの併用が理想。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>Perplexityは「出典付き検索」という独自ポジションで定番化</strong>。2026年のDeep Research機能で複数ソース横断の本格リサーチもカバーし、月額$20で無制限利用可能なコスパも含め1位。<strong>Gensparkは9つのLLMを統合する独自性</strong>と、2026年1月の日本法人設立によるサポート体制で急成長中。NotebookLMは「誤情報リスクを下げる」という明確なポジショニングと完全無料という強み。3つの併用（Webリサーチ＝Perplexity、マルチAI＝Genspark、手元資料分析＝NotebookLM）が理想形。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Perplexity</div>
+          <div class="tool-vendor">Perplexity AI</div>
+          <div class="tool-tagline">出典付き検索の定番、2〜4分でレポート生成</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2022年創業のAI検索エンジン。全回答に出典リンクを表示し、Deep Research機能で1クエリから最大42ソースを検索・分析。SimpleQAベンチマークで93.9%を記録。月間アクティブユーザー1億人超。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">Pro検索5回/日</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Max</span><span class="price-cost">$200<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise Pro</span><span class="price-cost">$40<span class="pslash">/人・月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>全回答に出典リンク表示</li>
+            <li>Deep Researchで深い調査を自動化</li>
+            <li>Spaces機能で資料のナレッジ化</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Genspark</div>
+          <div class="tool-vendor">MainFunc — 日本法人あり</div>
+          <div class="tool-tagline">9つのLLMを1契約で統合利用</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">米Palo Alto本社のMainFunc社が開発したオールインワンAIワークスペース。ChatGPT・Claude・Gemini等9つのLLMを1プラットフォームで使用可能。ARR $50Mを5ヶ月で達成、ユニコーン企業。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">毎日200クレジット</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Plus</span><span class="price-cost">$24.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$249.99<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>複数AI契約よりコスト大幅削減</li>
+            <li>スライド・Excel出力まで自動化</li>
+            <li>ソースネクストが日本公式代理店</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">NotebookLM</div>
+          <div class="tool-vendor">Google</div>
+          <div class="tool-tagline">自分の資料のみ参照、誤情報リスク最小</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Googleが開発するリサーチ特化AI。Web検索を行わず、アップロードしたPDF・動画・音声・URLのみを参照して回答。Gemini搭載、Audio Overview(自動ポッドキャスト)機能も特徴。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">全機能利用可</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">NotebookLM Plus<span class="tier-note">Google AI Pro含</span></span><span class="price-cost">$19.99<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>ハルシネーション最小の設計</li>
+            <li>完全無料で実用レベル</li>
+            <li>自動ポッドキャスト生成機能</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 8: コーディング ===== -->
+    <div class="tab-pane" id="t8">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">コーディング支援<span class="subtle">Coding Assistants</span></div>
+        </div>
+        <div class="cat-intro">開発者層でClaude Codeが圧倒的支持。Cursor、GitHub Copilotが続く安定の三強。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>Claude Codeは2026年4月16日のOpus 4.7リリースで「xhigh effort」「task budgets」など実作業向け機能が追加</strong>され、SWE-benchで他を圧倒する性能を実現。さらに<strong>5月6日のAnthropicとSpaceXのコンピュート提携</strong>によりPro/Maxの5時間レート上限が即日2倍、ピーク時間帯制限も撤廃。Cursorは統合IDEとして人気で、複数LLMを用途別に切り替えられる柔軟性が強み。<strong>GitHub Copilotは既存開発環境への組み込み容易さと企業向けガバナンス</strong>で、法人展開では最有力。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Claude Code</div>
+          <div class="tool-vendor">Anthropic — Opus 4.7</div>
+          <div class="tool-tagline">エージェント型自律タスクの決定版</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Anthropicが提供する自律型AI開発エージェント。ターミナル上で動作し、プロジェクト全体を理解してファイル編集・シェル実行・複雑なリファクタまで自律的に処理。2026年5月6日のAnthropicとSpaceXのコンピュート提携により、Claude Codeの5時間あたりレート上限が2倍に引き上げられ、ピーク時間帯の制限も撤廃。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Claude Pro<span class="tier-note">Claude Code含む</span></span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Max 5x</span><span class="price-cost">$100<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Max 20x</span><span class="price-cost">$200<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Team Standard<span class="tier-note">Code含まず</span></span><span class="price-cost">$25<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Team Premium<span class="tier-note">5人〜・Code含</span></span><span class="price-cost">$100<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">API<span class="tier-note">Opus 4.7</span></span><span class="price-cost">$5/$25<span class="pslash">/Mtok</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>複雑なコードタスクで業界最高品質</li>
+            <li>SWE-bench・CursorBenchで大幅ゲイン</li>
+            <li>Cowork(非エンジニア向け)も展開</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Cursor</div>
+          <div class="tool-vendor">Anysphere</div>
+          <div class="tool-tagline">AI統合IDEの人気ツール</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">VS Codeをベースにした次世代AI統合IDE。Claude・GPT-5.4・Geminiなど複数LLMを用途別に切替可能。2026年4月にはxAIとの契約で$10B、買収権$60Bという大型ディール。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Hobby<span class="tier-note">2週間無料</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business</span><span class="price-cost">$40<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Ultra</span><span class="price-cost">$200<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>複数LLMを用途別に切替可能</li>
+            <li>コードベース全体を理解する文脈把握</li>
+            <li>直感的なUIで学習コスト低</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">GitHub Copilot</div>
+          <div class="tool-vendor">GitHub / Microsoft</div>
+          <div class="tool-tagline">企業の標準、最も導入しやすい</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">GitHubが提供するAIコーディングアシスタント。VSCode・JetBrains等の主要IDEに統合可能。2026年4月にClaude Opus 4.7対応を開始し、Copilot Pro+でモデル選択が可能に。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月2,000補完</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro+<span class="tier-note">Opus 4.7対応</span></span><span class="price-cost">$39<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business</span><span class="price-cost">$19<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">$39<span class="pslash">/人・月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>既存開発環境への組込み容易</li>
+            <li>企業向けガバナンス機能完備</li>
+            <li>Opus 4.7含む複数モデル選択可</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 9: 自動化 ===== -->
+    <div class="tab-pane" id="t9">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">業務自動化<span class="subtle">Workflow Automation</span></div>
+        </div>
+        <div class="cat-intro">8,000超の連携数でZapierが首位。複雑ロジックならMake、セキュリティ重視ならn8nセルフホスト。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>Zapierは8,000超のアプリ連携数と導入5分以内の手軽さで、非エンジニア層を含む最大ユーザーベース</strong>を持つ定番。ただし中規模を超える運用ではタスク課金でコストが急上昇。Makeは<strong>ビジュアルエディタでの複雑ロジック設計とオペレーション課金でのコスト効率</strong>が強み。n8nはセルフホスト可能な唯一の選択肢で、<strong>機密業務や長期運用で最強</strong>の選択肢。LangChainノードによるAIエージェント構築も可能で、「AI×自動化」の深度では頭一つ抜けている。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Zapier</div>
+          <div class="tool-vendor">Zapier Inc.</div>
+          <div class="tool-tagline">8,000超のアプリ連携、導入時間5分以内</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">2011年創業、ワークフロー自動化の代名詞。業界最多の8,000超のアプリ連携、Zapier Copilot(自然言語ビルダー)・Zapier Agents(自律AIエージェント)・MCPサーバーなど2025年以降のAI機能強化が顕著。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月100タスク</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Professional</span><span class="price-cost">$19.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Team</span><span class="price-cost">$69<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>接続アプリ数が業界最多</li>
+            <li>ノーコードで5分以内に構築</li>
+            <li>AI Agents・Copilot機能搭載</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">Make</div>
+          <div class="tool-vendor">Make.com — 旧Integromat</div>
+          <div class="tool-tagline">ビジュアルフロービルダーでコスト効率最強</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">チェコ発の自動化プラットフォーム(旧Integromat)。視覚的なドラッグ&ドロップエディタで分岐・ループ・エラーハンドリングなど複雑ロジックを設計可能。2,000超のアプリ連携。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">月1,000オペ</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Core</span><span class="price-cost">$10.59<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$18.82<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Teams</span><span class="price-cost">$34.12<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>複雑ロジックを視覚的に設計可能</li>
+            <li>オペレーション課金で中規模に強い</li>
+            <li>2,000+のアプリ連携</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">n8n</div>
+          <div class="tool-vendor">n8n.io — ドイツ発</div>
+          <div class="tool-tagline">オープンソース・セルフホスト可能</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">ドイツ発のオープンソースワークフロー自動化ツール。セルフホスト可能で、JavaScript・Pythonのカスタムコード組込みも対応。2025年に€55M調達し、AIエージェント構築機能を強化。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Community<span class="tier-note">セルフホスト</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Starter<span class="tier-note">Cloud</span></span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Pro</span><span class="price-cost">$50<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>データを外部に出さないセルフホスト</li>
+            <li>LangChainノードでAI統合強力</li>
+            <li>長期運用のコスト最小</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 10: 情報整理 ===== -->
+    <div class="tab-pane" id="t10">
+      <div class="cat-header">
+        <div>
+          <div class="cat-name">情報整理・ナレッジ管理<span class="subtle">Knowledge Management</span></div>
+        </div>
+        <div class="cat-intro">オールインワンのNotion AI、ソース限定のNotebookLM、ローカル特化のObsidianが三者三様の強み。</div>
+      </div>
+
+      <div class="editor-analysis">
+        <div class="analysis-label">Editor's Analysis<span class="analysis-label-jp">総評</span></div>
+        <p class="analysis-body">
+          <strong>Notion AIは2026年9月のNotion 3.0でAIエージェントが自律的に数百ページを更新・作成できる水準に進化</strong>し、オールインワンの実用性で1位。NotebookLMは<strong>「自分の資料しか参照しない」という明確な設計思想で誤情報リスクを最小化</strong>、手元資料の深掘り分析で強い。Obsidianはローカル管理・Markdownベースで<strong>「完全に自分のデータ」を重視する個人ユーザー向けのトップ選択肢</strong>。用途によって3つの棲み分けが明確なため、併用が現実解。
+        </p>
+      </div>
+
+      <div class="rankings">
+        <div class="rank-card first">
+          <div class="rank-badge"><span class="rank-medal">01</span><span class="rank-label">Gold · 1st Place</span></div>
+          <div class="tool-name">Notion AI</div>
+          <div class="tool-vendor">Notion Labs</div>
+          <div class="tool-tagline">Notion 3.0でエージェント型に進化</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">ドキュメント・データベース・プロジェクト管理を統合したオールインワン生産性プラットフォーム。1億ユーザー利用。Notion 3.0でAIエージェントが20分以上のマルチステップタスクを自律実行、Enterprise Search(横断検索)も搭載。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">AI 20回試用</span></span><span class="price-cost">¥0</span></li>
+              <li class="price-item"><span class="price-tier">Plus</span><span class="price-cost">¥1,650<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Business<span class="tier-note">AI統合</span></span><span class="price-cost">¥3,150<span class="pslash">/人・月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise</span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>Enterprise Search(横断検索)搭載</li>
+            <li>AIミーティングノート対応</li>
+            <li>Slack・Drive・GitHub連携</li>
+          </ul>
+        </div>
+
+        <div class="rank-card second">
+          <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
+          <div class="tool-name">NotebookLM</div>
+          <div class="tool-vendor">Google</div>
+          <div class="tool-tagline">ソース限定AI、誤情報リスク最小</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Googleが提供するリサーチ特化AIツール。アップロードした資料のみを参照するため誤情報リスクを最小化。Gemini搭載、Audio Overview(自動ポッドキャスト生成)機能が独自の強み。G2評価4.6/5。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Free<span class="tier-note">全機能利用可</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">NotebookLM Plus<span class="tier-note">AI Pro付属</span></span><span class="price-cost">$19.99<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Enterprise<span class="tier-note">Google Workspace</span></span><span class="price-cost">要問合せ</span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>外部情報を参照しない設計</li>
+            <li>完全無料で実用レベル</li>
+            <li>自動ポッドキャスト生成機能</li>
+          </ul>
+        </div>
+
+        <div class="rank-card third">
+          <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
+          <div class="tool-name">Obsidian</div>
+          <div class="tool-vendor">Obsidian.md</div>
+          <div class="tool-tagline">ローカルファーストのPKM最強</div>
+
+          <div class="info-block">
+            <div class="info-label">Overview<span class="jp">概要</span></div>
+            <div class="info-body">Markdownベースのローカルファースト個人知識管理(PKM)ツール。データは完全に自分のPC内に保存され、1,800+のコミュニティプラグインで拡張可能。研究者・ライター・長期学習者に支持。</div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-label">Pricing<span class="jp">料金プラン</span></div>
+            <ul class="price-list">
+              <li class="price-item"><span class="price-tier">Personal<span class="tier-note">個人利用</span></span><span class="price-cost">$0</span></li>
+              <li class="price-item"><span class="price-tier">Commercial<span class="tier-note">商用</span></span><span class="price-cost">$50<span class="pslash">/年・人</span></span></li>
+              <li class="price-item"><span class="price-tier">Obsidian Sync<span class="tier-note">同期</span></span><span class="price-cost">$10<span class="pslash">/月</span></span></li>
+              <li class="price-item"><span class="price-tier">Publish<span class="tier-note">公開</span></span><span class="price-cost">$20<span class="pslash">/月</span></span></li>
+            </ul>
+          </div>
+
+          <div class="tool-strengths-label">Key strengths<span class="jp">強み</span></div>
+          <ul class="strength-list">
+            <li>完全ローカルでプライバシー最強</li>
+            <li>Markdownで永続性のある管理</li>
+            <li>個人用PKMでトップクラス</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MATRIX ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">V</span>総括マトリクス</h2>
+  <p class="section-sub">全10分野のトップ3を一覧で確認。顧客提案・社内共有用にそのまま利用可能。</p>
+  <div class="matrix-wrap">
+    <table class="matrix">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>1st Place</th>
+          <th>2nd Place</th>
+          <th>3rd Place</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat-cell"><span class="emoji">📝</span>文章生成</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>ChatGPT</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Microsoft Copilot</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>Gemini</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">🎨</span>画像生成</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>ChatGPT Images 2.0</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Adobe Firefly</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>Midjourney V7</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">🎬</span>動画生成</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Runway Gen-4.5</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Google Veo 3.1</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>Kling 2.6</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">🎵</span>音楽生成</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Soundraw</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Suno</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>Udio</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">🎙️</span>文字起こし・議事録</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Notta</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>LINE WORKS AiNote</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>スマート書記</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">📊</span>スライド作成</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Genspark</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Gamma</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>イルシル</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">🔎</span>情報収集・リサーチ</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Perplexity</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Genspark</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>NotebookLM</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">💻</span>コーディング支援</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Claude Code</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Cursor</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>GitHub Copilot</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">⚙️</span>業務自動化</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Zapier</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>Make</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>n8n</span></td>
+        </tr>
+        <tr>
+          <td class="cat-cell"><span class="emoji">📚</span>情報整理</td>
+          <td><span class="rank-tag rank-1"><span class="rank-tag-n">01</span>Notion AI</span></td>
+          <td><span class="rank-tag rank-2"><span class="rank-tag-n">02</span>NotebookLM</span></td>
+          <td><span class="rank-tag rank-3"><span class="rank-tag-n">03</span>Obsidian</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ INDUSTRY MATRIX (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">VI</span>業種・企業規模別 おすすめ</h2>
+  <p class="section-sub">業種と企業規模の組み合わせで、導入すべき主要ツールが大きく変わります。顧客の現状に応じた提案の参考にご利用ください。</p>
+  <div class="industry-matrix">
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="col-head">大企業・エンタープライズ</th>
+          <th class="col-head">中堅企業（100〜1,000名）</th>
+          <th class="col-head">中小・スタートアップ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="industry-row">
+          <th>🏭 製造業</th>
+          <td><strong>Copilot + Notta Business</strong>基幹系との連携重視、設計仕様書の自動化・技術文書翻訳に強い構成</td>
+          <td><strong>ChatGPT Team + スマート書記</strong>業界用語対応と導入容易さのバランス</td>
+          <td><strong>ChatGPT Plus + Gamma</strong>提案書作成の即効性を優先</td>
+        </tr>
+        <tr class="industry-row">
+          <th>💰 金融・法務</th>
+          <td><strong>Claude Enterprise + n8n</strong>機密データ対応必須、セルフホスト構成で情報漏洩リスク最小化</td>
+          <td><strong>Microsoft 365 E5 + Copilot</strong>既存セキュリティ基盤活用、契約書解析に強い</td>
+          <td><strong>ChatGPT Plus + NotebookLM</strong>個人レベルでも契約書の要点把握を高速化</td>
+        </tr>
+        <tr class="industry-row">
+          <th>🏥 医療</th>
+          <td><strong>Notta医療プラン + Claude Enterprise</strong>カルテ音声認識エンジン搭載の特別プランが存在</td>
+          <td><strong>LINE WORKS AiNote + Copilot</strong>ISO27001対応で医療機密にも対応可能</td>
+          <td><strong>ChatGPT Go + Notta Free</strong>開業医・クリニックは最低限の構成で効果大</td>
+        </tr>
+        <tr class="industry-row">
+          <th>🛍 小売・EC</th>
+          <td><strong>Gemini Enterprise + Midjourney</strong>商品画像生成と在庫分析、キャンペーン自動化</td>
+          <td><strong>Firefly + Canva + Zapier</strong>商用安全性と自動化の両立</td>
+          <td><strong>ChatGPT Plus + ChatGPT Images 2.0</strong>月$20で販促ビジュアルまで完結</td>
+        </tr>
+        <tr class="industry-row">
+          <th>💻 IT・SaaS</th>
+          <td><strong>Claude Team Premium + Cursor + GitHub Copilot</strong>複数モデルの使い分けで生産性最大化</td>
+          <td><strong>Claude Max 5x + n8n</strong>開発効率×自動化の王道</td>
+          <td><strong>Claude Pro + Cursor Pro</strong>月$40で最強の個人開発環境</td>
+        </tr>
+        <tr class="industry-row">
+          <th>📣 広告・マーケ</th>
+          <td><strong>Adobe GenStudio + Gamma Pro</strong>Firefly統合でAI動画・画像を一元管理</td>
+          <td><strong>Midjourney + Gamma + Runway</strong>クリエイティブ制作のフルスタック</td>
+          <td><strong>Genspark Plus + Canva</strong>リサーチ〜制作を一括で月$35程度</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ BUDGET GUIDE (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">VII</span>予算別 スタートガイド</h2>
+  <p class="section-sub">月額予算別に「最初に入れるべき1セット」を提示。徐々にステップアップする設計でムダのない導入が可能です。</p>
+
+  <div class="budget-grid">
+    <div class="budget-col">
+      <div class="b-range">¥0</div>
+      <div class="b-label">Starter · まず試す</div>
+      <div class="b-name">完全無料ではじめる</div>
+      <div class="b-desc">ChatGPT Free + NotebookLM + Obsidian + Kling Free。無料枠だけでも主要業務の8割は対応可能。</div>
+      <div class="b-tools-label">Tools</div>
+      <ul class="b-tools">
+        <li>ChatGPT Free<span class="t-cost">$0</span></li>
+        <li>NotebookLM<span class="t-cost">$0</span></li>
+        <li>Gamma Free<span class="t-cost">$0</span></li>
+        <li>Kling Free<span class="t-cost">$0</span></li>
+        <li>Obsidian<span class="t-cost">$0</span></li>
+      </ul>
+    </div>
+
+    <div class="budget-col">
+      <div class="b-range">¥1,200</div>
+      <div class="b-label">Light · 月1,000円級</div>
+      <div class="b-name">個人業務の効率化</div>
+      <div class="b-desc">ChatGPT Go（新設）+ Notta 年払い。月1,200円で日常業務の負担が劇的に軽減される現実的プラン。</div>
+      <div class="b-tools-label">Tools</div>
+      <ul class="b-tools">
+        <li>ChatGPT Go<span class="t-cost">$8/月</span></li>
+        <li>Notta Premium<span class="t-cost">¥1,185</span></li>
+        <li>Gamma Free<span class="t-cost">$0</span></li>
+        <li>NotebookLM<span class="t-cost">$0</span></li>
+      </ul>
+    </div>
+
+    <div class="budget-col featured">
+      <div class="b-range">¥3,000</div>
+      <div class="b-label">Standard · 月3,000円級 · 推奨</div>
+      <div class="b-name">本格的な業務効率化</div>
+      <div class="b-desc">ChatGPT Plus + Notta。画像生成も含めた王道の構成。ほとんどのビジネスパーソンにはこの組合せで十分。</div>
+      <div class="b-tools-label">Tools</div>
+      <ul class="b-tools">
+        <li>ChatGPT Plus<span class="t-cost">$20/月</span></li>
+        <li>Notta Premium<span class="t-cost">¥1,185</span></li>
+        <li>Perplexity Free<span class="t-cost">$0</span></li>
+        <li>Notion Plus<span class="t-cost">¥1,650</span></li>
+      </ul>
+    </div>
+
+    <div class="budget-col">
+      <div class="b-range">¥10,000+</div>
+      <div class="b-label">Pro · 月1万円以上</div>
+      <div class="b-name">プロフェッショナル</div>
+      <div class="b-desc">Claude Max 5x + Genspark Plus で、エージェント型自律タスクと9つのLLM統合。開発・コンサル職向け。</div>
+      <div class="b-tools-label">Tools</div>
+      <ul class="b-tools">
+        <li>Claude Max 5x<span class="t-cost">$100/月</span></li>
+        <li>Genspark Plus<span class="t-cost">$25/月</span></li>
+        <li>Midjourney Basic<span class="t-cost">$10/月</span></li>
+        <li>Notion Business<span class="t-cost">¥3,150</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PATTERNS ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">VIII</span>業務タイプ別 組み合わせ</h2>
+  <p class="section-sub">既存の業務基盤と親和性の高いツール同士を組み合わせることで、効果最大化。2026年は「1ツール統一」より「業務別使い分け」が正解。</p>
+
+  <div class="patterns-grid">
+    <div class="pattern">
+      <div class="pattern-icon">M</div>
+      <div class="pattern-body">
+        <h4>Microsoft 365中心の企業</h4>
+        <p>Office連携を活かし、日常業務に組み込む標準構成。情シス審査も通りやすい安定パターン。</p>
+        <div class="pattern-tags"><span class="ptag">ChatGPT</span><span class="ptag">Copilot</span><span class="ptag">Notta</span><span class="ptag">Firefly</span><span class="ptag">Zapier</span></div>
+      </div>
+    </div>
+    <div class="pattern">
+      <div class="pattern-icon">G</div>
+      <div class="pattern-body">
+        <h4>Google Workspace中心の企業</h4>
+        <p>Gmail・Drive・Docsと直結する構成。NotebookLMを絡めるとリサーチ業務も高速化。</p>
+        <div class="pattern-tags"><span class="ptag">Gemini</span><span class="ptag">Gamma</span><span class="ptag">Notta</span><span class="ptag">NotebookLM</span></div>
+      </div>
+    </div>
+    <div class="pattern">
+      <div class="pattern-icon">K</div>
+      <div class="pattern-body">
+        <h4>ナレッジ管理重視</h4>
+        <p>ドキュメント・議事録・提案書が組織資産の会社に。Notionを軸にすべてを繋ぐ構成。</p>
+        <div class="pattern-tags"><span class="ptag">Notion AI</span><span class="ptag">Claude</span><span class="ptag">Perplexity</span></div>
+      </div>
+    </div>
+    <div class="pattern">
+      <div class="pattern-icon">¥</div>
+      <div class="pattern-body">
+        <h4>コスト抑制重視</h4>
+        <p>月$30程度で主要業務をカバー。Genspark 1本で9つのLLMが使えるのが効く。</p>
+        <div class="pattern-tags"><span class="ptag">Genspark</span><span class="ptag">Make</span><span class="ptag">Obsidian</span></div>
+      </div>
+    </div>
+    <div class="pattern">
+      <div class="pattern-icon">C</div>
+      <div class="pattern-body">
+        <h4>クリエイティブ業務中心</h4>
+        <p>デザイン・動画・音楽のフル制作フロー。Claudeで企画、視覚/音響生成を各専門ツールに。</p>
+        <div class="pattern-tags"><span class="ptag">Claude</span><span class="ptag">Midjourney</span><span class="ptag">Runway</span><span class="ptag">Soundraw</span></div>
+      </div>
+    </div>
+    <div class="pattern">
+      <div class="pattern-icon">§</div>
+      <div class="pattern-body">
+        <h4>最高セキュリティ・機密業務</h4>
+        <p>金融・医療・法務など、データを外部に出せない業務向け。n8nセルフホスト+ローカル管理が鍵。</p>
+        <div class="pattern-tags"><span class="ptag">Claude Enterprise</span><span class="ptag">n8n Self-host</span><span class="ptag">Obsidian</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ API PRICING (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">IX</span>API料金比較 — 開発者向け</h2>
+  <p class="section-sub">AI機能を社内システムに組み込みたい開発者向け。Mtok = 100万トークン当たりの料金です。入力/出力で価格が分かれている点に注意。</p>
+
+  <div class="api-table-wrap">
+    <table class="api-table">
+      <thead>
+        <tr>
+          <th>モデル</th>
+          <th>特徴</th>
+          <th class="num">入力 (1Mtok)</th>
+          <th class="num">出力 (1Mtok)</th>
+          <th class="num">コンテキスト</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><div class="api-model">Claude Opus 4.7<span class="vendor">Anthropic · 2026.04</span></div></td>
+          <td>最高性能・推論・エージェント用途</td>
+          <td class="api-price">$5</td>
+          <td class="api-price">$25</td>
+          <td class="api-price">200K<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">Claude Sonnet 4.6<span class="vendor">Anthropic</span></div></td>
+          <td>コスパ最強・実務デフォルト</td>
+          <td class="api-price api-best">$3</td>
+          <td class="api-price">$15</td>
+          <td class="api-price">1M<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">Claude Haiku 4.5<span class="vendor">Anthropic</span></div></td>
+          <td>高速・軽量タスク向け</td>
+          <td class="api-price api-best">$0.80</td>
+          <td class="api-price api-best">$4</td>
+          <td class="api-price">200K<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">GPT-5.5<span class="vendor">OpenAI · 2026.04.23 · 最新フラグシップ</span></div></td>
+          <td>エージェント・知識業務・高精度推論</td>
+          <td class="api-price">$5</td>
+          <td class="api-price">$30</td>
+          <td class="api-price">1M+<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">GPT-5.4<span class="vendor">OpenAI · 前世代フラグシップ</span></div></td>
+          <td>マルチモーダル・Computer Use対応</td>
+          <td class="api-price">$5</td>
+          <td class="api-price">$25</td>
+          <td class="api-price">1M<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">GPT-5.4 mini<span class="vendor">OpenAI</span></div></td>
+          <td>コスパ型・大量処理向け</td>
+          <td class="api-price api-best">$0.25</td>
+          <td class="api-price api-best">$2</td>
+          <td class="api-price">128K<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">Gemini 3.1 Pro<span class="vendor">Google</span></div></td>
+          <td>長文処理・コスパ優秀</td>
+          <td class="api-price api-best">$1.25</td>
+          <td class="api-price">$10</td>
+          <td class="api-price">1M<span class="unit">tok</span></td>
+        </tr>
+        <tr>
+          <td><div class="api-model">Gemini 3.1 Flash<span class="vendor">Google</span></div></td>
+          <td>超高速・大量処理</td>
+          <td class="api-price api-best">$0.15</td>
+          <td class="api-price api-best">$0.60</td>
+          <td class="api-price">1M<span class="unit">tok</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-sub" style="margin-top:32px; max-width:800px;">
+    価格トレンド：2024→2026で同等性能のモデル料金は約80%低下しています。Prompt Cachingを使うと入力コストを最大90%削減できるため、長い参照コンテキストを繰り返し使う場合は必ず検討を。
+  </p>
+</section>
+
+<!-- ============ SHADOW AI (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">X</span>シャドーAI — 企業の新たな経営課題</h2>
+  <p class="section-sub">個人契約のAIツールが無断で業務に使われる「シャドーAI」は、情報漏洩リスクの温床。全社ガイドライン整備と公式導入がセットで必要です。</p>
+
+  <div class="shadow-wrap">
+    <div>
+      <div class="shadow-stat">14.4<span class="unit">%</span></div>
+      <div class="shadow-headline">会社未導入だが、個人で業務に使っている</div>
+      <div class="shadow-source">BOXIL Magazine · 2026年1月調査 (n=9,734)</div>
+    </div>
+    <div class="shadow-body">
+      <h5>なぜ発生するか</h5>
+      <p>会社が生成AIを公式に導入しないまま時間が経過すると、従業員は自らChatGPT Free版等を使い始めます。機密情報・顧客データ・社内資料がAIベンダーのサーバーに送信され、学習データに使われるリスクがあります。</p>
+      <h5>対策 — 3つのステップ</h5>
+      <ul class="shadow-list">
+        <li>全社ガイドライン策定（入力してはいけない情報、利用可能ツール、承認プロセス）</li>
+        <li>公式な法人プラン導入（学習除外設定・SSO・監査ログ付き）</li>
+        <li>定期的な利用実態調査とセキュリティ教育の実施</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">XI</span>よくある質問</h2>
+  <p class="section-sub">初めてAIツールを業務導入する際に頻出する疑問への回答。タップで展開します。</p>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">まず何から始めればいい？いきなり全分野を導入すべき？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>いきなり全分野への導入は失敗の典型例です。まずは<strong>最も時間を使っている業務1つ</strong>（議事録作成、資料作成、情報収集のいずれか）を選び、そこに対応するツールを1つだけ導入してください。ChatGPT Plus（$20/月）かNotta Premium（¥1,185/月）のどちらかから始めるのが王道。1ヶ月で効果を実感できたら、徐々に他分野へ展開するのが成功パターンです。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">無料プランでどこまでできる？本当に有料版が必要？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>無料プランの品質は年々向上しており、個人利用・試用目的ならChatGPT Free・NotebookLM・Obsidian・Kling Freeの組み合わせで相当なことができます。ただし<strong>業務利用では有料版が必須</strong>です。理由は3つ：（1）無料版はデータがAI学習に使われる、（2）出力モデルが下位版に制限される、（3）月内の利用回数制限がタイトです。業務で安定的に使うなら月$20〜30の投資は必要と考えてください。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">入力した内容はAI学習に使われる？機密情報を入れても大丈夫？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>プランによって大きく異なります。<strong>Free/Go/Plusプランはデフォルトで学習に使われます</strong>（ChatGPTは設定でオプトアウト可）。Team・Business・Enterpriseプランは学習除外がデフォルト、監査ログ・SSO・データ保持期間設定なども可能です。機密情報を扱う業務は必ずTeamプラン以上を利用してください。Claude APIはデフォルトで学習除外、Notta Businessも学習除外が標準設定です。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">商用利用OKかどうかの判断基準は？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>文章生成AI（ChatGPT・Claude・Gemini）は基本的に商用利用可、生成物の権利も利用者に帰属します。<strong>画像・音楽・動画生成は注意が必要</strong>です。Adobe Firefly・Soundraw・ChatGPT Images 2.0は商用利用が明確にOK。Midjourney・Runwayは有料プランで商用可。Suno・Udioは訴訟中の影響で規約が流動的。中国系ツール（Kling等）は規約変更リスクあり。必ず契約前に<strong>最新の利用規約を確認</strong>し、法務部の承認を得てください。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">複数のAIを契約するのは無駄？1つに絞るべき？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>2026年のベストプラクティスは<strong>「業務別の使い分け」</strong>です。1つのAIが全用途で最適ということはありません。ただし複数契約はコストが膨らむため、予算が月$30程度ならChatGPT Plus + Notta、月$50程度ならGenspark Plus（9 LLMを1契約で使える）+ Notta、月$100以上ならClaude Max + ChatGPT Plus + Genspark Plus等の組合せが現実的です。Gensparkは「複数AI契約のコスト削減」という新しい選択肢として急成長中です。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">情報漏洩が起きたらどうなる？リスク対策は？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>実際に国内外で機密情報が漏洩する事例が複数報告されています。対策は4段階：（1）<strong>全社ガイドライン</strong>で入力禁止情報を明文化、（2）<strong>法人プラン導入</strong>で学習除外を技術的に担保、（3）<strong>SSO・MDM</strong>で個人アカウント利用を防止、（4）<strong>定期監査</strong>で実態把握。シャドーAI対策は経営課題として扱うべきで、情シス単独では対応困難です。経営層の関与が必須と考えてください。</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="q-mark">Q.</span>
+        <span class="q-text">AIツールの料金って本当に安定している？急に変わる可能性は？</span>
+        <span class="q-toggle">+</span>
+      </div>
+      <div class="faq-a">
+        <p>残念ながら、料金体系は非常に流動的です。2026年だけでもChatGPT Go新設（1/15）、Free/Go広告導入（2月）、ChatGPT Pro $100新設（4/9）、Claude Code Pro除外テスト→撤回（4/21）、GPT-5.5リリース（4/23）、Anthropic×SpaceXでClaude Codeレート上限2倍（5/6）、ChatGPT広告テスト（5/7）と主要な変更が相次ぎました。長期契約は慎重に、複数ベンダーへの依存分散を意識し、本サイトの料金情報も参照時期により変動する可能性があるため、契約前は必ず公式サイトで最新価格をご確認ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOSSARY (NEW) ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">XII</span>AI用語集</h2>
+  <p class="section-sub">顧客との会話や提案書で頻出する基本用語。初心者の同僚への共有にもご利用ください。</p>
+
+  <div class="glossary-grid">
+    <div class="gl-item">
+      <div class="gl-term">エージェント<span class="gl-en">Agent</span></div>
+      <div class="gl-desc">複数ステップのタスクを自律的に実行するAI。メール確認→スケジュール調整→返信作成まで人間の介入なしで完了可能。Claude CoworkやZapier Agentsが代表例。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">MCP<span class="gl-en">Model Context Protocol</span></div>
+      <div class="gl-desc">AIと外部ツールを接続する標準規格。Anthropicが提唱。AIが社内システムやSaaSにアクセスする際の共通インターフェースを提供。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">ハルシネーション<span class="gl-en">Hallucination</span></div>
+      <div class="gl-desc">AIが事実でない情報を、さも事実のように出力する現象。契約書・医療・法務など重要業務ではファクトチェックが必須。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">RAG<span class="gl-en">Retrieval Augmented Generation</span></div>
+      <div class="gl-desc">社内文書を検索して回答生成する技術。社内ナレッジを参照しながら答えるため、ハルシネーションを減らせる。NotebookLMが分かりやすい実装例。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">セルフホスト<span class="gl-en">Self-host</span></div>
+      <div class="gl-desc">自社のサーバー内でソフトウェアを運用する形態。データが外部クラウドに出ないため機密業務に適する。n8nやObsidianが対応。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">学習除外<span class="gl-en">Opt-out</span></div>
+      <div class="gl-desc">入力データをAI訓練に使わせない設定。業務利用では必須。法人プランではデフォルト、個人プランは明示的設定が必要。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">マルチモーダル<span class="gl-en">Multimodal</span></div>
+      <div class="gl-desc">テキスト・画像・音声・動画を統合処理できるAI。GPT-5.4やClaude Opus 4.7は画像解析も可能。会議動画の要約などに有効。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">トークン<span class="gl-en">Token</span></div>
+      <div class="gl-desc">AIが処理する最小単位。日本語は1文字1〜2トークン程度。API料金はトークン数で課金。1Mトークン=約50万〜100万字の日本語。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">コンテキスト<span class="gl-en">Context Window</span></div>
+      <div class="gl-desc">AIが一度に扱える情報量。Claude Sonnet 4.6は1Mトークン（書籍数冊分）対応。大量の社内文書を1つにまとめて分析可能。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">プロンプト<span class="gl-en">Prompt</span></div>
+      <div class="gl-desc">AIへの指示文。「プロンプトエンジニアリング」は指示の書き方を最適化するスキル。明確な役割・目的・制約を書くことが基本。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">ファインチューニング<span class="gl-en">Fine-tuning</span></div>
+      <div class="gl-desc">既存AIモデルに自社データを追加学習させ、特化型モデルを作る手法。業界用語や自社ブランドトーンの再現に使われる。</div>
+    </div>
+    <div class="gl-item">
+      <div class="gl-term">Computer Use<span class="gl-en">Computer Use</span></div>
+      <div class="gl-desc">AIが人間のようにPC画面を操作する機能。2026年3月のGPT-5.4で本格実装。ブラウザ操作・アプリ起動・ファイル編集が可能に。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTES ============ -->
+<section class="section reveal">
+  <h2 class="section-title"><span class="num-chip">XIII</span>導入時に押さえるべき注意点</h2>
+  <p class="section-sub">ツール選定と同じくらい、運用ガバナンスが成否を分けます。</p>
+  <div class="note-row">
+    <div class="note-card">
+      <h5>学習除外設定は必須</h5>
+      <p>無料版・個人版は入力データがAI学習に使われるため、業務利用ではTeam/Enterpriseプラン以上を推奨。社内ポリシーで必ず明文化を。</p>
+    </div>
+    <div class="note-card">
+      <h5>商用利用規約の確認</h5>
+      <p>特に画像・音楽・動画生成は最新の利用規約を必ず確認。Suno/Udioは訴訟動向、Klingは中国系ツールの規約変更に注意。Perplexityは2025年に読売・朝日・日経の3社から提訴(2026年5月時点で継続中)、業務利用では著作権リスクを把握の上で利用を。</p>
+    </div>
+    <div class="note-card">
+      <h5>料金プランの急な変更</h5>
+      <p>Claude CodeのPro除外テスト→即撤回(4/21)やGPT-5.5の広告テスト(5/7)のように料金体系・機能構成は流動的。長期契約前は最新動向を確認。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-text">業務AIツール年鑑</div>
+      <div class="footer-brand-en"><em>The AI Atlas for Business</em> · 2026 Edition</div>
+      <p class="footer-desc">
+        2026年4月時点の最新動向を反映した、日本企業向けの分野別AIツールランキング。調査データは各種市場調査・ベンダー公表値・実装現場の知見を総合しています。
+      </p>
+    </div>
+    <div class="footer-col">
+      <h6>Sections</h6>
+      <ul>
+        <li>選定基準</li>
+        <li>分野別ランキング</li>
+        <li>総括マトリクス</li>
+        <li>組み合わせ提案</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h6>Source Notes</h6>
+      <ul>
+        <li>ICT総研 2026.02 調査</li>
+        <li>ノークリサーチ 国内導入</li>
+        <li>Similarweb トラフィック</li>
+        <li>各ベンダー公表値</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 · AI·Atlas — Business Intelligence Report</div>
+    <div>Published · May 11, 2026 · Tokyo</div>
+  </div>
+</footer>
+
+<script>
+  // ==== TAB SWITCHING ====
+  const tabs = document.querySelectorAll('.tab-btn');
+  const panes = document.querySelectorAll('.tab-pane');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      tabs.forEach(t => t.classList.remove('active'));
+      panes.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(target).classList.add('active');
+      tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    });
+  });
+
+  // ==== SCROLL REVEAL ====
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ==== FAQ ACCORDION ====
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const q = item.querySelector('.faq-q');
+    q.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      // Close all other items
+      faqItems.forEach(i => i.classList.remove('open'));
+      // Toggle clicked item
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // ==== SUBTLE PARALLAX ON HERO ====
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < 800) {
+        hero.style.transform = `translateY(${y * 0.08}px)`;
+        hero.style.opacity = `${1 - y * 0.0012}`;
+      }
+    }, { passive: true });
+  }
+</script>
+
+</body>
+</html>
