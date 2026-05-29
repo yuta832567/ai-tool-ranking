@@ -1443,6 +1443,53 @@ footer{
   .cat-nav-wrap{margin:0 -20px 28px}
   .t-item{grid-template-columns:80px 1fr;gap:16px}
 }
+
+  /* =====================================================================
+     TOOL LINK BUTTONS
+     ===================================================================== */
+  .tool-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    flex-wrap: wrap;
+  }
+  .tool-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: 20px;
+    font-family: var(--f-jp-sans);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-2);
+    text-decoration: none;
+    background: var(--bg-sub);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .tool-link:hover {
+    border-color: var(--blue-l);
+    color: var(--blue);
+    background: var(--blue-bg);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(26,79,156,.12);
+  }
+  .tool-link.pricing {
+    border-color: var(--yellow-bd);
+    color: var(--navy);
+    background: var(--yellow-bg);
+  }
+  .tool-link.pricing:hover {
+    background: #F5D860;
+    border-color: var(--yellow);
+    color: var(--navy);
+  }
+  .tl-ic { font-size: 13px; }
 </style>
 </head>
 <body>
@@ -1580,6 +1627,7 @@ footer{
           <li>画像・音声・エージェントすべて1つで完結</li>
           <li>GPT-5.5 InstantがデフォルトでRealtime音声も強化</li>
         </ul>
+        <div class="tool-links"><a href="https://chatgpt.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://chatgpt.com/#pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <!-- CARD 2 -->
       <div class="rank-card r2">
@@ -1605,6 +1653,7 @@ footer{
           <li>法人向けセキュリティ最高水準</li>
           <li>既存ライセンスからの追加導入が容易</li>
         </ul>
+        <div class="tool-links"><a href="https://copilot.microsoft.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.microsoft.com/ja-jp/microsoft-365/business/compare-all-plans" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <!-- CARD 3 -->
       <div class="rank-card r3">
@@ -1631,6 +1680,7 @@ footer{
           <li>Gemini 3.5 Flash：旧3.1 Proより高品質・4倍高速</li>
           <li>Gemini Spark（β）：24時間稼働パーソナルAIエージェント</li>
         </ul>
+        <div class="tool-links"><a href="https://gemini.google.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://one.google.com/about/plans?hl=ja" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c1 -->
@@ -1667,6 +1717,7 @@ footer{
         </div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div>
         <ul class="s-list"><li>日本語テキスト描画が実用レベル</li><li>2K解像度・Thinking mode搭載</li><li>ポスター・バナー・メニューで無双</li></ul>
+        <div class="tool-links"><a href="https://chatgpt.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://chatgpt.com/#pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1688,6 +1739,7 @@ footer{
         </div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div>
         <ul class="s-list"><li>著作権リスク最小の学習データ</li><li>Adobe製品とのシームレス統合</li><li>エンタープライズ案件で安心</li></ul>
+        <div class="tool-links"><a href="https://www.adobe.com/jp/products/firefly.html" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.adobe.com/jp/products/firefly/plans.html" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1709,6 +1761,7 @@ footer{
         </div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div>
         <ul class="s-list"><li>芸術的品質・映画的表現で業界トップ</li><li>SNS・広告ビジュアル用途に最適</li><li>Web版も充実し導入容易に</li></ul>
+        <div class="tool-links"><a href="https://www.midjourney.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.midjourney.com/account" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c2 -->
@@ -1729,6 +1782,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">映像品質・一貫性で業界評価トップ。モーションブラシでの細かな制御が可能で、映像制作プロの定番ツール。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">125クレジット</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Standard</span><span class="p-cost">$15<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$35<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Unlimited</span><span class="p-cost">$95<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>映像品質・物理シミュレーション最高峰</li><li>モーションブラシで精密な動き制御</li><li>プロ映像制作スタジオの採用実績</li></ul>
+        <div class="tool-links"><a href="https://runwayml.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://runwayml.com/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1738,6 +1792,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">セリフ・効果音・BGMまで1回で生成できる現状唯一クラス。5/19のGoogle I/O 2026で発表した映像制作ツール「Google Flow」との組み合わせでシーン生成・カット追加が可能になり実用性が大幅向上。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Google AI Pro</span><span class="p-cost">$19.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Google AI Ultra</span><span class="p-cost">$99.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Vertex AI</span><span class="p-cost">従量課金</span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>ネイティブ4K出力</li><li>映像＋音声ワンパス生成</li><li>Google Flow統合でプロ映像制作フロー完結</li></ul>
+        <div class="tool-links"><a href="https://deepmind.google/models/veo/" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://gemini.google.com" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1747,6 +1802,7 @@ footer{
         <div class="beginner-box"><div class="bb-icon">⚠️</div><div><strong>法務確認を推奨</strong>：中国の快手（Kuaishou）社が開発。データの取り扱いや利用規約は国内ツールと異なる場合があるため、企業利用前に法務部門へ確認を。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">毎日66クレジット</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Standard</span><span class="p-cost">$8<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$33<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>無料枠の豊富さが業界トップ</li><li>最大3分の長尺動画生成</li><li>アジア系人物の描写が得意</li></ul>
+        <div class="tool-links"><a href="https://klingai.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://klingai.com/price" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c3 -->
@@ -1767,6 +1823,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">日本発のAI音楽生成サービス。ジャンル・ムード・長さを指定するだけで無限に楽曲生成可能。全楽曲がロイヤリティフリーで商用利用完全対応。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">試聴のみ</span></span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Creator</span><span class="p-cost">$17<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Artist</span><span class="p-cost">$20<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Unlimited</span><span class="p-cost">$50<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>著作権フリー・商用利用完全対応</li><li>日本語サポート・国産の安心感</li><li>YouTube・企業動画BGMで最安全</li></ul>
+        <div class="tool-links"><a href="https://soundraw.io" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://soundraw.io/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1776,6 +1833,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">有料登録者200万人・ARR $300Mの業界最大手。v5.5で音声クローン・カスタムモデル・Suno Studio（DAW機能）を搭載。日本語歌詞にも対応。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">1日10曲</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$10<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Premier</span><span class="p-cost">$30<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>日本語歌詞にも対応</li><li>ボーカル品質が圧倒的</li><li>※訴訟動向・ダウンロード制限は要確認</li></ul>
+        <div class="tool-links"><a href="https://suno.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://suno.com/account" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1785,6 +1843,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">2024年4月リリース。楽器分離・キー制御・インペインティング（部分修正）等で音質面では業界最高。プロのミュージシャンやオーディオファイル層から高評価。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">月600曲</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Standard</span><span class="p-cost">$10<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$30<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>48kHzステレオの高音質出力</li><li>部分修正（インペインティング）機能</li><li>プロミュージシャンから高評価</li></ul>
+        <div class="tool-links"><a href="https://www.udio.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.udio.com/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c4 -->
@@ -1805,6 +1864,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">日本語認識精度98.86%（自社公表値）、58言語対応。Zoom・Teams・Google Meet全対応。スマホアプリで対面会議にも使える。累計4,000社超の法人導入実績。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">月120分</span></span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Premium<span class="tn">年払い</span></span><span class="p-cost">¥1,185<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Premium<span class="tn">月払い</span></span><span class="p-cost">¥2,200<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Business</span><span class="p-cost">¥3,960<span class="p-slash">/人・月〜</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>日本市場特化、辞書登録対応</li><li>58言語対応で多言語会議もカバー</li><li>スマホアプリで対面会議にも対応</li></ul>
+        <div class="tool-links"><a href="https://www.notta.ai/ja" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.notta.ai/ja/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1814,6 +1874,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">文字正解率90.8%、数字認識率80.3%。事前設定なしで話者をスマートに識別・分離。ISO27001認証・SSO対応など法人セキュリティで最強クラス。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">30日無料トライアル</span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Standard<span class="tn">人数無制限</span></span><span class="p-cost">¥19,800<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>ISO27001認証・エンタープライズ対応</li><li>事前設定なしで話者をスマートに識別・分離</li><li>利用人数無制限の料金体系</li></ul>
+        <div class="tool-links"><a href="https://line.worksmobile.com/jp/ainote/" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://line.worksmobile.com/jp/ainote/" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1823,6 +1884,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">日本のEpsilon社が開発。使うほど認識精度が向上する学習機能が特徴。用語登録不要で各社に最適化される設計。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">14日無料トライアル</span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Standard<span class="tn">1時間あたり</span></span><span class="p-cost">¥198〜</span></li><li class="p-item"><span class="p-tier">Enterprise</span><span class="p-cost">要問合せ</span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>業界特有の用語認識に強い</li><li>学習型で精度が継続的に向上</li><li>1時間¥198〜の業界最安水準</li></ul>
+        <div class="tool-links"><a href="https://smartshoki.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://smartshoki.com/price/" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c5 -->
@@ -1843,6 +1905,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">テーマ入力だけでWeb情報収集→構成→デザインまで一括処理。Guide Mode（戦略→内容→構造→デザイン→ビルドの5段階）でコンサル形式に進化。Workflows機能で20+アプリとの業務連携も可能。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">毎日200クレジット</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Plus</span><span class="p-cost">$24.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$249.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">ソースネクスト<span class="tn">1年版</span></span><span class="p-cost">¥37,680</span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>Guide Mode：5段階コンサル形式で高品質スライド</li><li>Fact Check機能で事実性担保</li><li>PowerPoint/PDF/Google Slides出力対応</li><li>Meeting Bots：会議に自律参加し議事録作成</li></ul>
+        <div class="tool-links"><a href="https://www.genspark.ai" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.genspark.ai/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1852,6 +1915,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">機械翻訳のような不自然さがない自然な日本語出力と圧倒的なスピードが特徴。カード型構造でデザインを自律最適化。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">400クレジット</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Plus</span><span class="p-cost">$10<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$20<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>ビジネス文書として十分な日本語品質</li><li>テキスト入力だけで数分で完成</li><li>PowerPoint・PDF形式で出力可</li></ul>
+        <div class="tool-links"><a href="https://gamma.app" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://gamma.app/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1861,6 +1925,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">日本ビジネスシーン特化のスライド生成AI。稟議書・提案書・議事録など日本の商習慣に即した3,000以上のテンプレートを搭載。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free</span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Personal</span><span class="p-cost">¥1,680<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Business</span><span class="p-cost">¥2,980<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>日本語特化型・国産の安心感</li><li>日本ビジネス文書の定型に最適化</li><li>UI完全日本語対応</li></ul>
+        <div class="tool-links"><a href="https://irusiru.jp" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://irusiru.jp/price" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c6 -->
@@ -1881,6 +1946,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">全回答に出典リンクを表示するAI検索エンジン。SimpleQAベンチマークで93.9%を記録。月間アクティブユーザー1億人超。※読売・朝日・日経の3社から提訴中（2026/5時点で係争継続）。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">Pro検索5回/日</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$20<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Max</span><span class="p-cost">$200<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Enterprise</span><span class="p-cost">$40<span class="p-slash">/人・月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>全回答に出典リンク表示</li><li>Deep Researchで深い調査を代行</li><li>Spaces機能で資料のナレッジ化</li></ul>
+        <div class="tool-links"><a href="https://www.perplexity.ai" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.perplexity.ai/pro" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1890,6 +1956,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">ChatGPT・Claude・Gemini等9つのLLMを1プラットフォームで使用可能。Workflows機能（20+アプリ連携）とMeeting Bots（会議自律参加・議事録）も搭載。ARR $50Mを5ヶ月で達成のユニコーン企業。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">毎日200クレジット</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Plus</span><span class="p-cost">$24.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$249.99<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>複数AI契約よりコスト大幅削減</li><li>スライド・Excel出力まで1ツールで完結</li><li>ソースネクストが日本公式代理店</li></ul>
+        <div class="tool-links"><a href="https://www.genspark.ai" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.genspark.ai/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1899,6 +1966,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">Googleが提供するリサーチ特化AI。アップロードした資料のみを参照するため誤情報リスクを最小化。Audio Overview（AIポッドキャスト生成）機能も特徴。2026年よりGeminiアプリに統合、全ユーザーが無料で利用可能に。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">全機能利用可</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">NotebookLM Plus</span><span class="p-cost">$19.99<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>外部情報を参照しない設計でハルシネーション最小</li><li>完全無料で実用レベル</li><li>AIポッドキャスト生成機能</li></ul>
+        <div class="tool-links"><a href="https://notebooklm.google.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://one.google.com/about/plans?hl=ja" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c7 -->
@@ -1919,6 +1987,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">Anthropicが提供する自律型AI開発エージェント。ターミナル上で動作しプロジェクト全体を理解して自律処理。5/6のSpaceXコンピュート提携によりレート上限2倍・ピーク制限撤廃。PwC提携（5/14）でグローバル数十万人規模への展開予定。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Claude Pro<span class="tn">Claude Code含む</span></span><span class="p-cost">$20<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Max 5x</span><span class="p-cost">$100<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Max 20x</span><span class="p-cost">$200<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Team Premium<span class="tn">5人〜・Code含</span></span><span class="p-cost">$100<span class="p-slash">/人・月</span></span></li><li class="p-item"><span class="p-tier">API<span class="tn">Opus 4.7</span></span><span class="p-cost">$5/$25<span class="p-slash">/Mtok</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>SWE-benchで業界最高峰の性能</li><li>SpaceX提携でレート上限2倍・ピーク制限撤廃</li><li>最長14時間30分の自律実行記録</li></ul>
+        <div class="tool-links"><a href="https://claude.ai/code" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://claude.ai/settings/billing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1928,6 +1997,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">VS Codeベースの次世代AI統合IDE。Cursor 3.1世代で8並列サブエージェントを実装し、JetBrainsネイティブ対応も追加。ARR $2B・ユーザー200万人超・Fortune 500の半数が採用。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Hobby</span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$20<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Business</span><span class="p-cost">$40<span class="p-slash">/人・月</span></span></li><li class="p-item"><span class="p-tier">Ultra</span><span class="p-cost">$200<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>8並列サブエージェントによる高速処理</li><li>複数LLMを用途別に切替可能</li><li>JetBrains・VSCode両対応</li></ul>
+        <div class="tool-links"><a href="https://www.cursor.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.cursor.com/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1937,6 +2007,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">VSCode・JetBrains等の主要IDEに統合可能。Claude Opus 4.7対応のPro+プランも展開。Copilot Agent Modeで自律的なコード変更も可能に。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">月2,000補完</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$10<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro+<span class="tn">Opus 4.7対応</span></span><span class="p-cost">$39<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Business</span><span class="p-cost">$19<span class="p-slash">/人・月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>既存開発環境への組込み容易</li><li>企業向けガバナンス機能完備</li><li>Opus 4.7含む複数モデル選択可</li></ul>
+        <div class="tool-links"><a href="https://github.com/features/copilot" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://github.com/features/copilot#pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c8 -->
@@ -1957,6 +2028,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">2011年創業、ワークフロー連携の代名詞。業界最多の8,000超アプリ連携。Zapier Copilot（自然言語ビルダー）・Zapier Agents（自律AIエージェント）搭載。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">月100タスク</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Professional</span><span class="p-cost">$19.99<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Team</span><span class="p-cost">$69<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Enterprise</span><span class="p-cost">要問合せ</span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>接続アプリ数が業界最多</li><li>ノーコードで5分以内に構築</li><li>AI Agents・Copilot機能搭載</li></ul>
+        <div class="tool-links"><a href="https://zapier.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://zapier.com/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -1966,6 +2038,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">チェコ発の連携プラットフォーム（旧Integromat）。視覚的なドラッグ&ドロップエディタで分岐・ループ・エラーハンドリングなど複雑ロジックを設計可能。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">月1,000オペ</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Core</span><span class="p-cost">$10.59<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$18.82<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Teams</span><span class="p-cost">$34.12<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>複雑ロジックを視覚的に設計可能</li><li>オペレーション課金で中規模に強い</li><li>2,000+のアプリ連携</li></ul>
+        <div class="tool-links"><a href="https://www.make.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.make.com/en/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -1975,6 +2048,7 @@ footer{
         <div class="beginner-box"><div class="bb-icon">💡</div><div><strong>セルフホスト</strong>とは、自社のサーバー内でソフトウェアを動かすこと。データが外部クラウドに出ないため、機密情報を扱う業務に最適。n8nはこれが可能な唯一のセルフホスト連携ツールです。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Community<span class="tn">セルフホスト</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Starter<span class="tn">Cloud</span></span><span class="p-cost">$20<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Pro</span><span class="p-cost">$50<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>データを外部に出さないセルフホスト</li><li>LangChainノードでAIエージェント構築</li><li>長期運用のコスト最小</li></ul>
+        <div class="tool-links"><a href="https://n8n.io" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://n8n.io/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c9 -->
@@ -1995,6 +2069,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">1億ユーザーが利用するオールインワン生産性プラットフォーム。AI Agentsがページ・データベース・カレンダー・Slack連携を横断して動く。2026年よりAI Agentsはアドオン（+$10/月）として独立。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">AI 20回試用</span></span><span class="p-cost">¥0</span></li><li class="p-item"><span class="p-tier">Plus</span><span class="p-cost">¥1,650<span class="p-slash">/人・月</span></span></li><li class="p-item"><span class="p-tier">Business</span><span class="p-cost">¥3,150<span class="p-slash">/人・月</span></span></li><li class="p-item"><span class="p-tier">AI Agents<span class="tn">アドオン</span></span><span class="p-cost">+$10<span class="p-slash">/月</span></span></li><li class="p-item"><span class="p-tier">Enterprise</span><span class="p-cost">要問合せ</span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>Enterprise Search（横断検索）搭載</li><li>AI Agents：ワークスペース全体を自律実行</li><li>Slack・Drive・GitHub連携</li></ul>
+        <div class="tool-links"><a href="https://www.notion.so/ja-jp" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://www.notion.so/ja-jp/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r2">
         <div class="rank-badge"><span class="rank-medal">02</span><span class="rank-label">Silver · 2nd Place</span></div>
@@ -2004,6 +2079,7 @@ footer{
         <div class="info-block"><div class="info-lbl">Overview<span class="j">概要</span></div><div class="info-body">Googleが提供するリサーチ特化AI。アップロードした資料のみ参照するため誤情報リスク最小。Audio Overview（AIポッドキャスト）機能、2026年よりGeminiアプリに統合され全ユーザーが無料で利用可能。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Free<span class="tn">全機能利用可</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Plus<span class="tn">AI Pro付属</span></span><span class="p-cost">$19.99<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>外部情報を参照しない設計</li><li>完全無料で実用レベル</li><li>AIポッドキャスト生成機能</li></ul>
+        <div class="tool-links"><a href="https://notebooklm.google.com" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://one.google.com/about/plans?hl=ja" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
       <div class="rank-card r3">
         <div class="rank-badge"><span class="rank-medal">03</span><span class="rank-label">Bronze · 3rd Place</span></div>
@@ -2013,6 +2089,7 @@ footer{
         <div class="beginner-box"><div class="bb-icon">💡</div><div><strong>PKM（Personal Knowledge Management）</strong>とは、個人が日常的に得た情報やアイデアを整理・活用するための知識管理手法のことです。</div></div>
         <div class="info-block"><div class="info-lbl">Pricing<span class="j">料金プラン</span></div><ul class="p-list"><li class="p-item"><span class="p-tier">Personal<span class="tn">個人利用</span></span><span class="p-cost">$0</span></li><li class="p-item"><span class="p-tier">Commercial</span><span class="p-cost">$50<span class="p-slash">/年・人</span></span></li><li class="p-item"><span class="p-tier">Sync</span><span class="p-cost">$10<span class="p-slash">/月</span></span></li></ul></div>
         <div class="strengths-lbl">Key strengths<span class="j">強み</span></div><ul class="s-list"><li>完全ローカルでプライバシー最強</li><li>Markdownで永続性のある管理</li><li>1,800+プラグインで拡張可能</li></ul>
+        <div class="tool-links"><a href="https://obsidian.md" class="tool-link" target="_blank" rel="noopener noreferrer"><span class="tl-ic">🌐</span>公式サイト</a><a href="https://obsidian.md/pricing" class="tool-link pricing" target="_blank" rel="noopener noreferrer"><span class="tl-ic">💴</span>料金プラン</a></div>
       </div>
     </div>
   </div><!-- /c10 -->
