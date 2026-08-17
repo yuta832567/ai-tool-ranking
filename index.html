@@ -1779,6 +1779,124 @@ body{
   color:var(--blue);
 }
 
+/* ===== User growth chart ===== */
+.growth-chart-wrap{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px 20px 16px;
+  margin-bottom:16px;
+  box-shadow:0 2px 12px rgba(13,43,98,0.05);
+}
+.gc-legend{
+  display:flex;
+  gap:24px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
+.gc-leg-item{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  font-family:var(--f-jp-sans);
+  font-size:13.5px;
+  font-weight:600;
+  color:var(--navy);
+}
+.gc-leg-metric{
+  font-family:var(--f-jp-sans);
+  font-size:10.5px;
+  font-weight:400;
+  color:var(--ink-muted);
+  background:var(--bg-sub);
+  padding:2px 7px;
+  border-radius:10px;
+  margin-left:2px;
+}
+.gc-dot{
+  width:14px;height:14px;
+  border-radius:50%;
+  display:inline-block;
+}
+.gc-svg-scroll{
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  max-width:100%;
+}
+.gc-svg{
+  width:100%;
+  min-width:520px;
+  height:auto;
+  display:block;
+}
+.gc-pt circle:first-child{
+  transition:r 0.15s ease;
+  cursor:pointer;
+}
+.gc-pt:hover circle:first-child{r:9;}
+.gc-tooltip{
+  position:absolute;
+  pointer-events:none;
+  background:var(--navy);
+  color:#fff;
+  font-family:var(--f-jp-sans);
+  font-size:12px;
+  line-height:1.6;
+  padding:9px 13px;
+  border-radius:8px;
+  box-shadow:0 4px 16px rgba(13,43,98,0.28);
+  opacity:0;
+  transform:translate(-50%,-115%);
+  transition:opacity 0.12s ease;
+  white-space:nowrap;
+  z-index:20;
+  max-width:220px;
+}
+.gc-tooltip.show{opacity:1;}
+.gc-tooltip .gct-val{font-family:var(--f-data);font-size:16px;font-weight:700;color:var(--yellow-l);display:block;margin:2px 0;}
+.gc-tooltip .gct-src{font-size:10.5px;color:#B9C9E6;display:block;margin-top:3px;}
+.growth-note-cards{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:48px;
+}
+.gn-card{
+  background:var(--bg-sub);
+  border-left:4px solid var(--blue-l);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:16px 18px;
+}
+.gn-head{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-family:var(--f-jp-sans);
+  font-weight:700;
+  font-size:15px;
+  color:var(--navy);
+  margin-bottom:8px;
+}
+.gn-logo{
+  width:30px;height:30px;
+  border-radius:7px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:15px;
+  flex-shrink:0;
+}
+.gn-card p{
+  font-family:var(--f-jp-sans);
+  font-size:12.5px;
+  line-height:1.85;
+  color:var(--ink);
+  margin:0;
+}
+.gn-card strong{color:var(--navy);}
+
 /* Responsive */
 @media(max-width:1100px){
   .ai-cards{grid-template-columns:repeat(2,1fr)}
@@ -1795,6 +1913,25 @@ body{
   .big-stats{grid-template-columns:1fr}
   .bs-cell{border-right:none}
   .bs-cell:nth-child(2n+1){border-right:none}
+  .growth-note-cards{grid-template-columns:1fr}
+  /* keep tooltip bubbles inside the viewport on narrow screens */
+  .tip-bubble{
+    width:min(200px,68vw);
+  }
+  /* growth-chart note: make tips inline so the sentence wraps, and pin
+     bubbles to viewport center so they never widen the paragraph */
+  .gc-note .tip{display:inline;white-space:normal;}
+  .gc-note .tip-bubble{
+    position:fixed;
+    left:50%;
+    right:auto;
+    bottom:auto;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:min(280px,84vw);
+    z-index:300;
+  }
+  .gc-note .tip-bubble::after{display:none;}
 }
 
 /* =====================================================================
@@ -2040,6 +2177,116 @@ footer{
       </div>
     </div>
     <p style="font-size:11.5px;color:var(--ink-muted);margin-bottom:48px;font-family:var(--f-jp-sans);">出典：CommercePick「2026年企業の生成AI利用実態調査」（管理職1,008名対象・<strong>複数回答可</strong>）。1人が複数AIを併用する例が多く、合計は100%を超えます。「ChatGPT」「Gemini」はCodex・NotebookLMなど同系統サービスを含む。</p>
+
+    <!-- User growth chart -->
+    <div class="sec-hd reveal">
+      <h2 class="sec-title">世界の利用者数はどう伸びている？</h2>
+      <p class="sec-desc">2大AIの利用者数の伸びを、各社が公式に発表した「その時点の数字」だけで示しました。ポイントにカーソルを合わせる（スマホはタップ）と詳細が出ます。</p>
+    </div>
+
+    <div class="beginner-box reveal gc-note" style="margin-bottom:20px;">
+      <div class="bb-icon">📖</div>
+      <div><strong>グラフを読む前に：指標がAIごとに違います</strong><br>
+      各社は利用者を<strong>別々のものさし</strong>で発表しています。ChatGPTは<span class="tip">週間利用者<span class="tip-mark">?</span><span class="tip-bubble">WAU＝Weekly Active Users。1週間に1回以上使った人の数。OpenAIは「月間」の数字を公式には出していません。</span></span>、Geminiは<span class="tip">月間利用者<span class="tip-mark">?</span><span class="tip-bubble">MAU＝Monthly Active Users。1か月に1回以上使った人の数。Alphabet（Google親会社）の決算で公表されます。</span></span>です。数え方が違うため、<strong>「どちらが上か」ではなく「それぞれの伸び方」に注目</strong>してください。点と点をつなぐ線は、発表がない期間を補うための<strong>参考の目安（破線）</strong>で、実測値ではありません。</div>
+    </div>
+
+    <div class="growth-chart-wrap reveal">
+      <div class="gc-legend">
+        <span class="gc-leg-item"><span class="gc-dot" style="background:#0FA37F;"></span>ChatGPT<span class="gc-leg-metric">週間利用者</span></span>
+        <span class="gc-leg-item"><span class="gc-dot" style="background:#1A4F9C;"></span>Gemini<span class="gc-leg-metric">月間利用者</span></span>
+      </div>
+      <div class="gc-svg-scroll">
+      <svg viewBox="0 0 760 420" class="gc-svg" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ChatGPTとGeminiの利用者数推移（2025年前半〜2026年8月）">
+        <!-- Y grid lines and labels (0 to 1000M) -->
+        <g font-family="'JetBrains Mono', monospace" font-size="12" fill="#6B7A96">
+          <line x1="70" y1="40"  x2="740" y2="40"  stroke="#D4E3F5" stroke-width="1"/>
+          <text x="60" y="44" text-anchor="end">10億</text>
+          <line x1="70" y1="116" x2="740" y2="116" stroke="#EAF1FA" stroke-width="1"/>
+          <text x="60" y="120" text-anchor="end">8億</text>
+          <line x1="70" y1="192" x2="740" y2="192" stroke="#EAF1FA" stroke-width="1"/>
+          <text x="60" y="196" text-anchor="end">6億</text>
+          <line x1="70" y1="268" x2="740" y2="268" stroke="#EAF1FA" stroke-width="1"/>
+          <text x="60" y="272" text-anchor="end">4億</text>
+          <line x1="70" y1="344" x2="740" y2="344" stroke="#EAF1FA" stroke-width="1"/>
+          <text x="60" y="348" text-anchor="end">2億</text>
+          <line x1="70" y1="380" x2="740" y2="380" stroke="#D4E3F5" stroke-width="1.5"/>
+          <text x="60" y="384" text-anchor="end">0</text>
+        </g>
+        <!-- Y axis title -->
+        <text x="24" y="210" text-anchor="middle" font-family="'Zen Kaku Gothic New', sans-serif" font-size="12" fill="#0D2B62" transform="rotate(-90 24 210)">利用者数（人）</text>
+        <!-- X axis labels -->
+        <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#6B7A96" text-anchor="middle">
+          <text x="110" y="402">25年5月</text>
+          <text x="240" y="402">25年10月</text>
+          <text x="370" y="402">26年2月</text>
+          <text x="500" y="402">26年5月</text>
+          <text x="610" y="402">26年7月</text>
+          <text x="700" y="402">26年8月</text>
+        </g>
+        <!-- 2026 focus shading -->
+        <rect x="305" y="40" width="435" height="340" fill="#1A4F9C" opacity="0.03"/>
+        <text x="320" y="58" font-family="'Zen Kaku Gothic New', sans-serif" font-size="11" fill="#4880CC" opacity="0.8">← 2026年 →</text>
+
+        <!-- ChatGPT (WAU) dashed guide line: points at x for 25/5(n/a start 25/2), plot from 25/7 -->
+        <!-- Data: 25/2=400M(x=45 off-chart start not shown), 25/7=700M, 25/10-12=800M, 26/2=900M -->
+        <!-- x mapping: 25/5=110, 25/7≈175, 25/10=240, 26/2=370, 26/5=500, 26/7=610, 26/8=700 -->
+        <!-- y mapping: 380 - (value/1000M * 340). 700M→380-238=142; 800M→380-272=108; 900M→380-306=74 -->
+        <polyline points="175,142 240,108 370,74" fill="none" stroke="#0FA37F" stroke-width="2.5" stroke-dasharray="7 5" opacity="0.55"/>
+        <!-- ChatGPT no official update after 26/2: show flat faint dotted extension to indicate "no new official data" -->
+        <line x1="370" y1="74" x2="700" y2="74" stroke="#0FA37F" stroke-width="1.5" stroke-dasharray="2 6" opacity="0.3"/>
+        <text x="530" y="66" font-family="'Zen Kaku Gothic New', sans-serif" font-size="10" fill="#0FA37F" opacity="0.65">※2月以降 公式更新なし</text>
+
+        <!-- Gemini (MAU) dashed guide line -->
+        <!-- Data: 25/5=400M, 25/10=650M, 26/2=750M, 26/5=900M, 26/7=950M, 26/8/11=1000M -->
+        <!-- 400M→380-136=244; 650M→380-221=159; 750M→380-255=125; 900M→380-306=74; 950M→380-323=57; 1000M→380-340=40 -->
+        <polyline points="110,244 240,159 370,125 500,74 610,57 700,40" fill="none" stroke="#1A4F9C" stroke-width="2.5" stroke-dasharray="7 5" opacity="0.55"/>
+
+        <!-- Data points: Gemini -->
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2025年5月" data-val="4億人" data-src="Google I/O 2025">
+          <circle cx="110" cy="244" r="6" fill="#1A4F9C"/><circle cx="110" cy="244" r="12" fill="#1A4F9C" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2025年10月" data-val="6.5億人" data-src="Alphabet Q3 2025決算">
+          <circle cx="240" cy="159" r="6" fill="#1A4F9C"/><circle cx="240" cy="159" r="12" fill="#1A4F9C" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2026年2月" data-val="7.5億人" data-src="Alphabet Q4 2025決算">
+          <circle cx="370" cy="125" r="6" fill="#1A4F9C"/><circle cx="370" cy="125" r="12" fill="#1A4F9C" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2026年5月" data-val="9億人" data-src="Google I/O 2026">
+          <circle cx="500" cy="74" r="6" fill="#1A4F9C"/><circle cx="500" cy="74" r="12" fill="#1A4F9C" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2026年7月" data-val="9.5億人" data-src="Alphabet Q2 2026決算">
+          <circle cx="610" cy="57" r="6" fill="#1A4F9C"/><circle cx="610" cy="57" r="12" fill="#1A4F9C" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="Gemini 月間利用者" data-date="2026年8月11日" data-val="10億人" data-src="Google公式発表">
+          <circle cx="700" cy="40" r="7" fill="#1A4F9C" stroke="#fff" stroke-width="2"/><circle cx="700" cy="40" r="13" fill="#1A4F9C" opacity="0"/>
+        </g>
+
+        <!-- Data points: ChatGPT -->
+        <g class="gc-pt" data-label="ChatGPT 週間利用者" data-date="2025年7月" data-val="7億人" data-src="OpenAI公式">
+          <circle cx="175" cy="142" r="6" fill="#0FA37F"/><circle cx="175" cy="142" r="12" fill="#0FA37F" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="ChatGPT 週間利用者" data-date="2025年10〜12月" data-val="8億人" data-src="OpenAI公式">
+          <circle cx="240" cy="108" r="6" fill="#0FA37F"/><circle cx="240" cy="108" r="12" fill="#0FA37F" opacity="0"/>
+        </g>
+        <g class="gc-pt" data-label="ChatGPT 週間利用者" data-date="2026年2月27日" data-val="9億人" data-src="OpenAI公式（最新の公式値）">
+          <circle cx="370" cy="74" r="7" fill="#0FA37F" stroke="#fff" stroke-width="2"/><circle cx="370" cy="74" r="13" fill="#0FA37F" opacity="0"/>
+        </g>
+      </svg>
+      </div>
+      <div class="gc-tooltip" id="gcTooltip" aria-hidden="true"></div>
+    </div>
+    <p style="font-size:11.5px;color:var(--ink-muted);margin-bottom:16px;font-family:var(--f-jp-sans);line-height:1.8;">出典（すべて公式発表）：<strong>Gemini</strong>＝Alphabet四半期決算およびGoogle公式発表（月間アクティブユーザー）。<strong>ChatGPT</strong>＝OpenAI公式（週間アクティブユーザー）。<br>※ChatGPTは2026年2月27日の9億人（週間）以降、公式の新しい数値が発表されていません。報道では7月下旬に週間10億人に迫るとされますが、OpenAIは未確認のため本グラフには含めていません。<br>※両者は「週間」と「月間」で数え方が異なり、単純な優劣比較はできません。破線は発表の間を結んだ目安で、実測値ではありません。</p>
+
+    <div class="growth-note-cards reveal">
+      <div class="gn-card" style="border-left-color:#D4940A;">
+        <div class="gn-head"><span class="gn-logo" style="background:linear-gradient(135deg,#E8A317,#D4940A);">📊</span>Microsoft Copilot</div>
+        <p>Copilotは利用者数ではなく<strong>「有料シート数」</strong>で公表されます。2026年7月29日時点で<strong>3,000万シート</strong>（前四半期の2,000万から1四半期で1,000万増）。企業のMicrosoft 365に組み込まれる形のため、上のグラフとは性質が異なり別枠としています。</p>
+      </div>
+      <div class="gn-card" style="border-left-color:#A6724A;">
+        <div class="gn-head"><span class="gn-logo" style="background:linear-gradient(135deg,#C28E5B,#A6724A);">🎓</span>Claude</div>
+        <p>Anthropicは<strong>利用者数を公式に公表していません</strong>。第三者調査では市場シェア約4%とされますが、推計値のため本グラフには載せていません。法人・開発者・専門職での評価が高い一方、一般消費者向けの利用者数は非開示です。</p>
+      </div>
+    </div>
 
     <!-- 4 AI cards -->
     <div class="sec-hd reveal">
@@ -3362,6 +3609,38 @@ footer{
      JAVASCRIPT
      ================================================================ -->
 <script>
+/* ---- User growth chart tooltip ---- */
+(function(){
+  const wrap = document.querySelector('.growth-chart-wrap');
+  const tip = document.getElementById('gcTooltip');
+  if (!wrap || !tip) return;
+  const pts = wrap.querySelectorAll('.gc-pt');
+  function showTip(g, clientX, clientY){
+    const label = g.dataset.label, date = g.dataset.date, val = g.dataset.val, src = g.dataset.src;
+    tip.innerHTML = '<span>'+label+'</span><span class="gct-val">'+val+'</span><span>'+date+'</span><span class="gct-src">出典：'+src+'</span>';
+    const wrapRect = wrap.getBoundingClientRect();
+    tip.style.left = (clientX - wrapRect.left) + 'px';
+    tip.style.top  = (clientY - wrapRect.top) + 'px';
+    tip.classList.add('show');
+    tip.setAttribute('aria-hidden','false');
+  }
+  function hideTip(){ tip.classList.remove('show'); tip.setAttribute('aria-hidden','true'); }
+  pts.forEach(g => {
+    const circ = g.querySelector('circle');
+    g.addEventListener('mouseenter', e => {
+      const r = circ.getBoundingClientRect();
+      showTip(g, r.left + r.width/2, r.top + r.height/2);
+    });
+    g.addEventListener('mouseleave', hideTip);
+    g.addEventListener('click', e => {
+      e.stopPropagation();
+      const r = circ.getBoundingClientRect();
+      showTip(g, r.left + r.width/2, r.top + r.height/2);
+    });
+  });
+  document.addEventListener('click', e => { if (!wrap.contains(e.target)) hideTip(); });
+})();
+
 /* ---- Main Section Tabs ---- */
 const mnavBtns = document.querySelectorAll('.mnav-btn');
 const mainPanes = document.querySelectorAll('.main-pane');
